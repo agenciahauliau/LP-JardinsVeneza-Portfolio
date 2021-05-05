@@ -7,7 +7,7 @@ header {
   position: sticky;
   top: 0;
   z-index: 10;
-  background: #fff;
+  background: #008241;
   -webkit-transition: 0.2 ease;
   transition: 0.2 ease;
 }
@@ -16,13 +16,13 @@ header nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 24px;
+  padding: 8px;
 }
 
 header nav .logo svg {
@@ -196,7 +196,6 @@ header nav .menu .itensMenu {
   position: fixed;
   top: 0;
   left: 0;
-  background: #fff;
   z-index: 10;
 }
 
@@ -223,8 +222,8 @@ header nav .menu .itensMenu ul li {
 }
 
 header nav .menu .itensMenu ul li a {
-  font-size: 2.5em;
-  font-weight: 100;
+  color: #fff;
+  font-weight: 400;
 }
 
 header.topoPequeno {
@@ -276,6 +275,48 @@ section.a .videoBack video {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+section.da {
+  padding: 0;
+  position: -webkit-sticky;
+  position: sticky;
+  bottom: 0;
+}
+
+section.da h4 {
+  padding: 5px;
+  background: #d81f25;
+  color: #fff;
+  text-align: center;
+  border-radius: 10px 10px 0 0;
+}
+
+section.db {
+  background: #008241;
+}
+
+section.db .container {
+  -ms-grid-columns: 50% 50%;
+      grid-template-columns: 50% 50%;
+}
+
+section.db .formulario {
+  padding: 13px;
+  color: #fff;
+}
+
+section.db .formulario p {
+  margin: 13px 0 34px;
+}
+
+section.db .formulario input,
+section.db .formulario textarea {
+  width: 100%;
+  margin: 8px 0;
+  background: none;
+  color: #fff;
+  border: 1px solid #fff5;
 }
 
 footer {
