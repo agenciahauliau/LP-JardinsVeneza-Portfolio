@@ -197,12 +197,29 @@ section.a {
     }
   }
 }
+section.c {
+  .infoJardins {
+    display: grid;
+    grid-template-columns: 50% 50%;
 
-section.da{
+    .carrossel {
+      width: 100%;
+      .slider {
+        .slide {
+          display: none;
+          &.active {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+}
+section.da {
   padding: 0;
   position: sticky;
   bottom: 0;
-  h4{
+  h4 {
     padding: 5px;
     background: #d81f25;
     color: #fff;
@@ -220,7 +237,7 @@ section.db {
     padding: 13px;
     color: #fff;
 
-    p{
+    p {
       margin: 13px 0 34px;
     }
     input,

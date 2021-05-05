@@ -277,6 +277,25 @@ section.a .videoBack video {
      object-fit: cover;
 }
 
+section.c .infoJardins {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 50% 50%;
+      grid-template-columns: 50% 50%;
+}
+
+section.c .infoJardins .carrossel {
+  width: 100%;
+}
+
+section.c .infoJardins .carrossel .slider .slide {
+  display: none;
+}
+
+section.c .infoJardins .carrossel .slider .slide.active {
+  display: block;
+}
+
 section.da {
   padding: 0;
   position: -webkit-sticky;
