@@ -47,8 +47,10 @@ for (const carrossel of carrosseis) {
 	function circleIndicator() {
 		for (let i = 0; i < slider.children.length; i++) {
 			const div = document.createElement('div');
-			div.innerHTML = `<img id="${i}" src="${imagens[i]}" style="width: 60px !important;" />`;
-			div.setAttribute('onclick', 'indicateSlide(this)');
+			div.innerHTML = `<img id="${i}" src="${imagens[i]}" class="imgem_pequena" />`;
+			div.addEventListener('click', function () {
+				indicateSlide(this);
+			});
 			div.id = i;
 			if (i == 0) {
 				div.className = 'active';
@@ -57,14 +59,6 @@ for (const carrossel of carrosseis) {
 		}
 	}
 	circleIndicator();
-
-	function indicateSlide(element) {
-		console.log(element);
-		index = element.id;
-		changeSlide();
-		updateCircleIndicator();
-		resetTimer();
-	}
 
 	function updateCircleIndicator() {
 		for (const i of indicator.children) {
@@ -78,6 +72,13 @@ for (const carrossel of carrosseis) {
 			i.classList.remove('active');
 		}
 		slider.children[index].classList.add('active');
+	}
+
+	function indicateSlide(element) {
+		index = element.id;
+		changeSlide();
+		updateCircleIndicator();
+		resetTimer();
 	}
 
 	function resetTimer() {
