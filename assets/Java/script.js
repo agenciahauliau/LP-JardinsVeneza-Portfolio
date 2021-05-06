@@ -1,95 +1,103 @@
-const carrosseis = document.querySelectorAll('.carrossel');
+const carrosseis = document.querySelectorAll(".carrossel");
 
 for (const carrossel of carrosseis) {
-	const prev = carrossel.querySelector('.prev');
-	const next = carrossel.querySelector('.next');
-	const slider = carrossel.querySelector('.slider');
-	const indicator = carrossel.querySelector('.indicator');
-	let index = 0;
+  const prev = carrossel.querySelector(".prev");
+  const next = carrossel.querySelector(".next");
+  const slider = carrossel.querySelector(".slider");
+  const indicator = carrossel.querySelector(".indicator");
+  let index = 0;
 
-	prev.addEventListener('click', function () {
-		prevSlide();
-		updateCircleIndicator();
-		resetTimer();
-	});
+  slider.addEventListener("click", function () {
+    for (const i of slider.children) {
+    //   i.classList.remove("active");
+    }
+    // slider.children[index].classList.add("active");
+	carrossel.classList.add("active");
+  });
 
-	next.addEventListener('click', function () {
-		nextSlide();
-		updateCircleIndicator();
-		resetTimer();
-	});
+  prev.addEventListener("click", function () {
+    prevSlide();
+    updateCircleIndicator();
+    resetTimer();
+  });
 
-	function prevSlide() {
-		if (index == 0) {
-			index = slider.children.length - 1;
-		} else {
-			index--;
-		}
-		changeSlide();
-	}
+  next.addEventListener("click", function () {
+    nextSlide();
+    updateCircleIndicator();
+    resetTimer();
+  });
 
-	function nextSlide() {
-		if (index == slider.children.length - 1) {
-			index = 0;
-		} else {
-			index++;
-		}
-		changeSlide();
-	}
+  function prevSlide() {
+    if (index == 0) {
+      index = slider.children.length - 1;
+    } else {
+      index--;
+    }
+    changeSlide();
+  }
 
-	/* Criando um array das imagens de cada slider */
-	let imagens = [];
-	for (const i of slider.querySelectorAll('img')) {
-		imagens.push(i.src);
-	}
+  function nextSlide() {
+    if (index == slider.children.length - 1) {
+      index = 0;
+    } else {
+      index++;
+    }
+    changeSlide();
+  }
 
-	// create circle indicators
-	function circleIndicator() {
-		for (let i = 0; i < slider.children.length; i++) {
-			const div = document.createElement('div');
-			div.innerHTML = `<img id="${i}" src="${imagens[i]}" class="imgem_pequena" />`;
-			div.addEventListener('click', function () {
-				indicateSlide(this);
-			});
-			div.id = i;
-			if (i == 0) {
-				div.className = 'active';
-			}
-			indicator.appendChild(div);
-		}
-	}
-	circleIndicator();
+  /* Criando um array das imagens de cada slider */
+  let imagens = [];
+  for (const i of slider.querySelectorAll("img")) {
+    imagens.push(i.src);
+  }
 
-	function updateCircleIndicator() {
-		for (const i of indicator.children) {
-			i.classList.remove('active');
-		}
-		indicator.children[index].classList.add('active');
-	}
+  // create circle indicators
+  function circleIndicator() {
+    for (let i = 0; i < slider.children.length; i++) {
+      const div = document.createElement("div");
+      div.innerHTML = `<img id="${i}" src="${imagens[i]}" class="imgem_pequena" />`;
+      div.addEventListener("click", function () {
+        indicateSlide(this);
+      });
+      div.id = i;
+      if (i == 0) {
+        div.className = "active";
+      }
+      indicator.appendChild(div);
+    }
+  }
+  circleIndicator();
 
-	function changeSlide() {
-		for (const i of slider.children) {
-			i.classList.remove('active');
-		}
-		slider.children[index].classList.add('active');
-	}
+  function updateCircleIndicator() {
+    for (const i of indicator.children) {
+      i.classList.remove("active");
+    }
+    indicator.children[index].classList.add("active");
+  }
 
-	function indicateSlide(element) {
-		index = element.id;
-		changeSlide();
-		updateCircleIndicator();
-		resetTimer();
-	}
+  function changeSlide() {
+    for (const i of slider.children) {
+      i.classList.remove("active");
+    }
+    slider.children[index].classList.add("active");
+  }
 
-	function resetTimer() {
-		clearInterval(timer);
-		timer = setInterval(autoPlay, 4000);
-	}
+  function indicateSlide(element) {
+    index = element.id;
+    changeSlide();
+    updateCircleIndicator();
+    resetTimer();
+  }
 
-	function autoPlay() {
-		nextSlide();
-		updateCircleIndicator();
-	}
+  function resetTimer() {
+    clearInterval(timer);
+    timer = setInterval(autoPlay, 4000);
+  }
 
-	let timer = setInterval(autoPlay, 4000);
+  function autoPlay() {
+    nextSlide();
+    updateCircleIndicator();
+  }
+
+  let timer = setInterval(autoPlay, 4000);
 }
