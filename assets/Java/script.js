@@ -1,90 +1,94 @@
-const carrossel = document.querySelectorAll('.slider');
-const slides = document.querySelector(".slider").children;
-const prev = document.querySelector(".prev");
-const next = document.querySelector(".next");
-const indicator = document.querySelector(".indicator");
-const imagens = document.querySelectorAll(".slide img")
-let index = 0;
+const carrosseis = document.querySelectorAll('.carrossel');
 
+for (const carrossel of carrosseis) {
+	const prev = carrossel.querySelector('.prev');
+	const next = carrossel.querySelector('.next');
+	const slider = carrossel.querySelector('.slider');
+	const indicator = carrossel.querySelector('.indicator');
+	let index = 0;
 
-console.log(carrossel[0].parentElement.id);
+	prev.addEventListener('click', function () {
+		prevSlide();
+		updateCircleIndicator();
+		resetTimer();
+	});
 
-prev.addEventListener("click", function () {
-  prevSlide();
-  updateCircleIndicator();
-  resetTimer();
-});
+	next.addEventListener('click', function () {
+		nextSlide();
+		updateCircleIndicator();
+		resetTimer();
+	});
 
-next.addEventListener("click", function () {
-  nextSlide();
-  updateCircleIndicator();
-  resetTimer();
-});
+	function prevSlide() {
+		if (index == 0) {
+			index = slider.children.length - 1;
+		} else {
+			index--;
+		}
+		changeSlide();
+	}
 
+	function nextSlide() {
+		if (index == slider.children.length - 1) {
+			index = 0;
+		} else {
+			index++;
+		}
+		changeSlide();
+	}
 
-function prevSlide() {
-    if (index == 0) {
-      index = slides.length - 1;
-    } else {
-      index--;
-    }
-    changeSlide();
-  }
-  
-  function nextSlide() {
-    if (index == slides.length - 1) {
-      index = 0;
-    } else {
-      index++;
-    }
-    changeSlide();
-  }
+	/* Criando um array das imagens de cada slider */
+	let imagens = [];
+	for (const i of slider.querySelectorAll('img')) {
+		imagens.push(i.src);
+	}
 
-// create circle indicators
-function circleIndicator() {
-  for (let i = 0; i < slides.length; i++) {
-    const div = document.createElement("div");
-    div.innerHTML = i + 1;
-    div.setAttribute("onclick", "indicateSlide(this)");
-    div.id = i;
-    if (i == 0) {
-      div.className = "active";
-    }
-    indicator.appendChild(div);
-  }
+	// create circle indicators
+	function circleIndicator() {
+		for (let i = 0; i < slider.children.length; i++) {
+			const div = document.createElement('div');
+			div.innerHTML = `<img id="${i}" src="${imagens[i]}" style="width: 60px !important;" />`;
+			div.setAttribute('onclick', 'indicateSlide(this)');
+			div.id = i;
+			if (i == 0) {
+				div.className = 'active';
+			}
+			indicator.appendChild(div);
+		}
+	}
+	circleIndicator();
+
+	function indicateSlide(element) {
+		console.log(element);
+		index = element.id;
+		changeSlide();
+		updateCircleIndicator();
+		resetTimer();
+	}
+
+	function updateCircleIndicator() {
+		for (const i of indicator.children) {
+			i.classList.remove('active');
+		}
+		indicator.children[index].classList.add('active');
+	}
+
+	function changeSlide() {
+		for (const i of slider.children) {
+			i.classList.remove('active');
+		}
+		slider.children[index].classList.add('active');
+	}
+
+	function resetTimer() {
+		clearInterval(timer);
+		timer = setInterval(autoPlay, 4000);
+	}
+
+	function autoPlay() {
+		nextSlide();
+		updateCircleIndicator();
+	}
+
+	let timer = setInterval(autoPlay, 4000);
 }
-circleIndicator();
-
-function indicateSlide(element) {
-  index = element.id;
-  changeSlide();
-  updateCircleIndicator();
-  resetTimer();
-}
-
-function updateCircleIndicator() {
-  for (let i = 0; i < indicator.children.length; i++) {
-    indicator.children[i].classList.remove("active");
-  }
-  indicator.children[index].classList.add("active");
-}
-
-function changeSlide() {
-  for (let i = 0; i < slides.length; i++) {
-    slides[i].classList.remove("active");
-  }
-
-  slides[index].classList.add("active");
-}
-
-function resetTimer() {
-  clearInterval(timer);
-  timer = setInterval(autoPlay, 4000);
-}
-
-function autoPlay() {
-  nextSlide();
-  updateCircleIndicator();
-}
-
-let timer = setInterval(autoPlay, 4000);

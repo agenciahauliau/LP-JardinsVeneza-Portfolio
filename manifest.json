@@ -1,15 +1,15 @@
 {
-  "short_name": "FGR Jardins Veneza",
-  "name": "FGR Jardins Veneza",
-  "start_url": ".",
-  "background_color": "#ffffff",
-  "theme_color": "#ff0800",
-  "display": "minimal-ui",
-  "description": "Casas térreas e sobrados com opções diferenciadas de fachadas para você escolher, e a possibilidade de financiar tudo direto com a FGR.",
-  "categories": ["business", "finance", "lifestyle"],
-  "dir": "ltr",
-  "lang": "pt-BR",
-  "orientation": "any",
-  "screenshots": "any",
-  "icons": "any"
+	"short_name": "FGR Jardins Veneza",
+	"name": "FGR Jardins Veneza",
+	"start_url": ".",
+	"background_color": "#ffffff",
+	"theme_color": "#ff0800",
+	"display": "minimal-ui",
+	"description": "Casas térreas e sobrados com opções diferenciadas de fachadas para você escolher, e a possibilidade de financiar tudo direto com a FGR.",
+	"categories": ["business", "finance", "lifestyle"],
+	"dir": "ltr",
+	"lang": "pt-BR",
+	"orientation": "any",
+	"screenshots": "any",
+	"icons": "any"
 }

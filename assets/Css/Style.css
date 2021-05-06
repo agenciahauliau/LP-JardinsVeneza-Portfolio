@@ -1,510 +1,511 @@
 header {
-  width: 100%;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0;
-  z-index: 10;
-  background: #008241;
-  -webkit-transition: 0.2 ease;
-  transition: 0.2 ease;
+	width: 100%;
+	height: -webkit-fit-content;
+	height: -moz-fit-content;
+	height: fit-content;
+	position: -webkit-sticky;
+	position: sticky;
+	top: 0;
+	z-index: 10;
+	background: #008241;
+	-webkit-transition: 0.2 ease;
+	transition: 0.2 ease;
 }
 
 header nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding: 8px;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	padding: 8px;
 }
 
 header nav .logo svg {
-  -webkit-transition: 0.5s ease;
-  transition: 0.5s ease;
-  width: 100px;
+	-webkit-transition: 0.5s ease;
+	transition: 0.5s ease;
+	width: 100px;
 }
 
 header nav .menu {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  position: relative;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	position: relative;
 }
 
 header nav .menu label {
-  display: none;
+	display: none;
 }
 
 header nav .menu .chaveMenu {
-  width: 48px;
-  height: 48px;
-  position: absolute;
-  left: 0;
-  z-index: 15;
-  opacity: 0;
+	width: 48px;
+	height: 48px;
+	position: absolute;
+	left: 0;
+	z-index: 15;
+	opacity: 0;
 }
 
 header nav .menu .iconeMenu {
-  position: relative;
-  z-index: 14;
+	position: relative;
+	z-index: 14;
 }
 
 header nav .menu .iconeMenu .plate {
-  height: 48px;
-  width: 48px;
+	height: 48px;
+	width: 48px;
 }
 
 header nav .menu .iconeMenu .burger {
-  -webkit-filter: url(#gooeyness);
-          filter: url(#gooeyness);
+	-webkit-filter: url(#gooeyness);
+	filter: url(#gooeyness);
 }
 
 header nav .menu .iconeMenu .x {
-  -webkit-transform: scale(0);
-          transform: scale(0);
-  -webkit-transition: -webkit-transform 400ms;
-  transition: -webkit-transform 400ms;
-  transition: transform 400ms;
-  transition: transform 400ms, -webkit-transform 400ms;
+	-webkit-transform: scale(0);
+	transform: scale(0);
+	-webkit-transition: -webkit-transform 400ms;
+	transition: -webkit-transform 400ms;
+	transition: transform 400ms;
+	transition: transform 400ms, -webkit-transform 400ms;
 }
 
 header nav .menu .iconeMenu .x .line {
-  stroke-width: 5.5px;
+	stroke-width: 5.5px;
 }
 
 header nav .menu .iconeMenu .line {
-  fill: none;
-  stroke: black;
-  stroke-width: 6px;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  -webkit-transform-origin: 50%;
-          transform-origin: 50%;
-  -webkit-transition: stroke-dasharray 500ms 200ms, stroke-dashoffset 500ms 200ms, -webkit-transform 500ms 200ms;
-  transition: stroke-dasharray 500ms 200ms, stroke-dashoffset 500ms 200ms, -webkit-transform 500ms 200ms;
-  transition: stroke-dasharray 500ms 200ms, stroke-dashoffset 500ms 200ms, transform 500ms 200ms;
-  transition: stroke-dasharray 500ms 200ms, stroke-dashoffset 500ms 200ms, transform 500ms 200ms, -webkit-transform 500ms 200ms;
+	fill: none;
+	stroke: black;
+	stroke-width: 6px;
+	stroke-linecap: round;
+	stroke-linejoin: round;
+	-webkit-transform-origin: 50%;
+	transform-origin: 50%;
+	-webkit-transition: stroke-dasharray 500ms 200ms, stroke-dashoffset 500ms 200ms, -webkit-transform 500ms 200ms;
+	transition: stroke-dasharray 500ms 200ms, stroke-dashoffset 500ms 200ms, -webkit-transform 500ms 200ms;
+	transition: stroke-dasharray 500ms 200ms, stroke-dashoffset 500ms 200ms, transform 500ms 200ms;
+	transition: stroke-dasharray 500ms 200ms, stroke-dashoffset 500ms 200ms, transform 500ms 200ms,
+		-webkit-transform 500ms 200ms;
 }
 
 header nav .menu .chaveMenu:checked ~ .iconeMenu .plate .line {
-  -webkit-transition: stroke-dasharray 500ms, stroke-dashoffset 500ms, -webkit-transform 500ms;
-  transition: stroke-dasharray 500ms, stroke-dashoffset 500ms, -webkit-transform 500ms;
-  transition: stroke-dasharray 500ms, stroke-dashoffset 500ms, transform 500ms;
-  transition: stroke-dasharray 500ms, stroke-dashoffset 500ms, transform 500ms, -webkit-transform 500ms;
+	-webkit-transition: stroke-dasharray 500ms, stroke-dashoffset 500ms, -webkit-transform 500ms;
+	transition: stroke-dasharray 500ms, stroke-dashoffset 500ms, -webkit-transform 500ms;
+	transition: stroke-dasharray 500ms, stroke-dashoffset 500ms, transform 500ms;
+	transition: stroke-dasharray 500ms, stroke-dashoffset 500ms, transform 500ms, -webkit-transform 500ms;
 }
 
 header nav .menu .chaveMenu:checked ~ .iconeMenu .plate .x {
-  -webkit-transform: scale(1);
-          transform: scale(1);
-  -webkit-transition: -webkit-transform 400ms 350ms;
-  transition: -webkit-transform 400ms 350ms;
-  transition: transform 400ms 350ms;
-  transition: transform 400ms 350ms, -webkit-transform 400ms 350ms;
+	-webkit-transform: scale(1);
+	transform: scale(1);
+	-webkit-transition: -webkit-transform 400ms 350ms;
+	transition: -webkit-transform 400ms 350ms;
+	transition: transform 400ms 350ms;
+	transition: transform 400ms 350ms, -webkit-transform 400ms 350ms;
 }
 
 header nav .menu .chaveMenu:checked ~ .iconeMenu .plate.plate4 .line {
-  -webkit-transition: -webkit-transform 400ms;
-  transition: -webkit-transform 400ms;
-  transition: transform 400ms;
-  transition: transform 400ms, -webkit-transform 400ms;
+	-webkit-transition: -webkit-transform 400ms;
+	transition: -webkit-transform 400ms;
+	transition: transform 400ms;
+	transition: transform 400ms, -webkit-transform 400ms;
 }
 
 header nav .menu .chaveMenu:checked ~ .iconeMenu .plate.plate4 .line1 {
-  -webkit-transform: translateX(18px) translateY(-3px) rotate(-45deg) scale(0.7);
-          transform: translateX(18px) translateY(-3px) rotate(-45deg) scale(0.7);
+	-webkit-transform: translateX(18px) translateY(-3px) rotate(-45deg) scale(0.7);
+	transform: translateX(18px) translateY(-3px) rotate(-45deg) scale(0.7);
 }
 
 header nav .menu .chaveMenu:checked ~ .iconeMenu .plate.plate4 .line2 {
-  -webkit-transform: translateX(-18px) translateY(-3px) rotate(45deg) scale(0.7);
-          transform: translateX(-18px) translateY(-3px) rotate(45deg) scale(0.7);
+	-webkit-transform: translateX(-18px) translateY(-3px) rotate(45deg) scale(0.7);
+	transform: translateX(-18px) translateY(-3px) rotate(45deg) scale(0.7);
 }
 
 header nav .menu .chaveMenu:checked ~ .iconeMenu .plate.plate4 .line3 {
-  -webkit-transform: translateY(0px) rotate(45deg) scale(0.7);
-          transform: translateY(0px) rotate(45deg) scale(0.7);
+	-webkit-transform: translateY(0px) rotate(45deg) scale(0.7);
+	transform: translateY(0px) rotate(45deg) scale(0.7);
 }
 
 header nav .menu .chaveMenu:checked ~ .iconeMenu .plate.plate4 .line4 {
-  -webkit-transform: translateY(0px) rotate(-45deg) scale(0.7);
-          transform: translateY(0px) rotate(-45deg) scale(0.7);
+	-webkit-transform: translateY(0px) rotate(-45deg) scale(0.7);
+	transform: translateY(0px) rotate(-45deg) scale(0.7);
 }
 
 header nav .menu .chaveMenu:checked ~ .iconeMenu .plate.plate4 .line5 {
-  -webkit-transform: translateX(18px) translateY(3px) rotate(45deg) scale(0.7);
-          transform: translateX(18px) translateY(3px) rotate(45deg) scale(0.7);
+	-webkit-transform: translateX(18px) translateY(3px) rotate(45deg) scale(0.7);
+	transform: translateX(18px) translateY(3px) rotate(45deg) scale(0.7);
 }
 
 header nav .menu .chaveMenu:checked ~ .iconeMenu .plate.plate4 .line6 {
-  -webkit-transform: translateX(-18px) translateY(3px) rotate(-45deg) scale(0.7);
-          transform: translateX(-18px) translateY(3px) rotate(-45deg) scale(0.7);
+	-webkit-transform: translateX(-18px) translateY(3px) rotate(-45deg) scale(0.7);
+	transform: translateX(-18px) translateY(3px) rotate(-45deg) scale(0.7);
 }
 
 header nav .menu .chaveMenu:checked ~ .iconeMenu .plate.plate4 .x {
-  -webkit-transition: -webkit-transform 400ms 100ms;
-  transition: -webkit-transform 400ms 100ms;
-  transition: transform 400ms 100ms;
-  transition: transform 400ms 100ms, -webkit-transform 400ms 100ms;
-  -webkit-transform: scale(1);
-          transform: scale(1);
+	-webkit-transition: -webkit-transform 400ms 100ms;
+	transition: -webkit-transform 400ms 100ms;
+	transition: transform 400ms 100ms;
+	transition: transform 400ms 100ms, -webkit-transform 400ms 100ms;
+	-webkit-transform: scale(1);
+	transform: scale(1);
 }
 
 header nav .menu .chaveMenu:checked ~ .iconeMenu .plate4 .x {
-  -webkit-transition: -webkit-transform 400ms;
-  transition: -webkit-transform 400ms;
-  transition: transform 400ms;
-  transition: transform 400ms, -webkit-transform 400ms;
+	-webkit-transition: -webkit-transform 400ms;
+	transition: -webkit-transform 400ms;
+	transition: transform 400ms;
+	transition: transform 400ms, -webkit-transform 400ms;
 }
 
 header nav .menu .chaveMenu:checked ~ .iconeMenu .plate4 .line {
-  -webkit-transform-origin: 50%;
-          transform-origin: 50%;
-  -webkit-transition: -webkit-transform 400ms 100ms;
-  transition: -webkit-transform 400ms 100ms;
-  transition: transform 400ms 100ms;
-  transition: transform 400ms 100ms, -webkit-transform 400ms 100ms;
+	-webkit-transform-origin: 50%;
+	transform-origin: 50%;
+	-webkit-transition: -webkit-transform 400ms 100ms;
+	transition: -webkit-transform 400ms 100ms;
+	transition: transform 400ms 100ms;
+	transition: transform 400ms 100ms, -webkit-transform 400ms 100ms;
 }
 
 header nav .menu .chaveMenu ~ .itensMenu {
-  display: none;
+	display: none;
 }
 
 header nav .menu .chaveMenu:checked ~ .itensMenu {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
 }
 
 header nav .menu .itensMenu {
-  width: 100%;
-  height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 10;
+	width: 100%;
+	height: 100%;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 10;
 }
 
 header nav .menu .itensMenu ul {
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+	width: 100%;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
 }
 
 header nav .menu .itensMenu ul li {
-  text-align: center;
-  margin: 24px;
+	text-align: center;
+	margin: 24px;
 }
 
 header nav .menu .itensMenu ul li a {
-  color: #fff;
-  font-weight: 400;
+	color: #fff;
+	font-weight: 400;
 }
 
 header.topoPequeno {
-  -webkit-transition: 0.2 ease;
-  transition: 0.2 ease;
-  background: #fffd;
+	-webkit-transition: 0.2 ease;
+	transition: 0.2 ease;
+	background: #fffd;
 }
 
 header.topoPequeno nav {
-  padding: 6px;
+	padding: 6px;
 }
 
 header.topoPequeno nav .logo svg {
-  -webkit-transition: 0.5s ease;
-  transition: 0.5s ease;
-  width: 75px;
+	-webkit-transition: 0.5s ease;
+	transition: 0.5s ease;
+	width: 75px;
 }
 
 section {
-  padding: 24px 12px;
-  position: relative;
+	padding: 24px 12px;
+	position: relative;
 }
 
 div.link {
-  padding-top: 72px;
+	padding-top: 72px;
 }
 
 section.a {
-  min-height: 500px;
+	min-height: 500px;
 }
 
 section.a .texto {
-  height: 100%;
-  display: -ms-grid;
-  display: grid;
+	height: 100%;
+	display: -ms-grid;
+	display: grid;
 }
 
 section.a .videoBack {
-  width: 100%;
-  height: 600px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -10;
+	width: 100%;
+	height: 600px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -10;
 }
 
 section.a .videoBack video {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+	width: 100%;
+	height: 100%;
+	-o-object-fit: cover;
+	object-fit: cover;
 }
 
 section.c .infoJardins {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 50% 50%;
-      grid-template-columns: 50% 50%;
+	display: -ms-grid;
+	display: grid;
+	-ms-grid-columns: 50% 50%;
+	grid-template-columns: 50% 50%;
 }
 
 section.c .infoJardins .carrossel {
-  width: 100%;
+	width: 100%;
 }
 
 section.c .infoJardins .carrossel .slider .slide {
-  display: none;
+	display: none;
 }
 
 section.c .infoJardins .carrossel .slider .slide.active {
-  display: block;
+	display: block;
 }
 
 section.da {
-  padding: 0;
-  position: -webkit-sticky;
-  position: sticky;
-  bottom: 0;
+	padding: 0;
+	position: -webkit-sticky;
+	position: sticky;
+	bottom: 0;
 }
 
 section.da h4 {
-  padding: 5px;
-  background: #d81f25;
-  color: #fff;
-  text-align: center;
-  border-radius: 10px 10px 0 0;
+	padding: 5px;
+	background: #d81f25;
+	color: #fff;
+	text-align: center;
+	border-radius: 10px 10px 0 0;
 }
 
 section.db {
-  background: #008241;
+	background: #008241;
 }
 
 section.db .container {
-  -ms-grid-columns: 50% 50%;
-      grid-template-columns: 50% 50%;
+	-ms-grid-columns: 50% 50%;
+	grid-template-columns: 50% 50%;
 }
 
 section.db .formulario {
-  padding: 13px;
-  color: #fff;
+	padding: 13px;
+	color: #fff;
 }
 
 section.db .formulario p {
-  margin: 13px 0 34px;
+	margin: 13px 0 34px;
 }
 
 section.db .formulario input,
 section.db .formulario textarea {
-  width: 100%;
-  margin: 8px 0;
-  background: none;
-  color: #fff;
-  border: 1px solid #fff5;
+	width: 100%;
+	margin: 8px 0;
+	background: none;
+	color: #fff;
+	border: 1px solid #fff5;
 }
 
 footer {
-  padding: 12px;
-  background: #0001;
-  text-align: center;
+	padding: 12px;
+	background: #0001;
+	text-align: center;
 }
 
 footer .logo svg {
-  width: 125px;
+	width: 125px;
 }
 
 footer > * {
-  padding-bottom: 12px;
-  margin-bottom: 12px;
-  border-bottom: 1px solid #fff;
+	padding-bottom: 12px;
+	margin-bottom: 12px;
+	border-bottom: 1px solid #fff;
 }
 
 footer > * p,
 footer > * li {
-  margin-bottom: 6px;
+	margin-bottom: 6px;
 }
 
 footer > *:last-child {
-  padding-bottom: 0;
-  margin-bottom: 12px;
-  border-bottom: none;
+	padding-bottom: 0;
+	margin-bottom: 12px;
+	border-bottom: none;
 }
 
 @media screen and (min-width: 650px) {
-  header nav {
-    max-width: 1520px;
-    margin: auto;
-  }
-  header nav .logo svg {
-    width: 175px;
-  }
-  header nav .menu .chaveMenu,
-  header nav .menu .iconeMenu {
-    display: none;
-  }
-  header nav .menu .chaveMenu ~ .itensMenu {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
-  header nav .menu .itensMenu {
-    position: relative;
-  }
-  header nav .menu .itensMenu ul {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-  }
-  header nav .menu .itensMenu ul li {
-    text-align: center;
-    margin: 12px;
-    margin-right: 24px;
-  }
-  header nav .menu .itensMenu ul li a {
-    font-size: 1em;
-  }
-  header.topoPequeno nav .logo svg {
-    width: 125px;
-  }
-  header.topoPequeno nav .itensMenu {
-    background: none;
-  }
-  footer {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    padding-top: 24px;
-  }
-  footer > * {
-    width: calc(100% / 3);
-    height: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    border-bottom: none;
-  }
-  footer > *:last-child {
-    width: 100%;
-    padding-top: 12px;
-    border-top: 1px solid #fff;
-  }
+	header nav {
+		max-width: 1520px;
+		margin: auto;
+	}
+	header nav .logo svg {
+		width: 175px;
+	}
+	header nav .menu .chaveMenu,
+	header nav .menu .iconeMenu {
+		display: none;
+	}
+	header nav .menu .chaveMenu ~ .itensMenu {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+	}
+	header nav .menu .itensMenu {
+		position: relative;
+	}
+	header nav .menu .itensMenu ul {
+		-webkit-box-orient: horizontal;
+		-webkit-box-direction: normal;
+		-ms-flex-direction: row;
+		flex-direction: row;
+	}
+	header nav .menu .itensMenu ul li {
+		text-align: center;
+		margin: 12px;
+		margin-right: 24px;
+	}
+	header nav .menu .itensMenu ul li a {
+		font-size: 1em;
+	}
+	header.topoPequeno nav .logo svg {
+		width: 125px;
+	}
+	header.topoPequeno nav .itensMenu {
+		background: none;
+	}
+	footer {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-ms-flex-wrap: wrap;
+		flex-wrap: wrap;
+		-webkit-box-pack: justify;
+		-ms-flex-pack: justify;
+		justify-content: space-between;
+		-webkit-box-align: center;
+		-ms-flex-align: center;
+		align-items: center;
+		padding-top: 24px;
+	}
+	footer > * {
+		width: calc(100% / 3);
+		height: 100%;
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		-ms-flex-direction: column;
+		flex-direction: column;
+		-webkit-box-align: center;
+		-ms-flex-align: center;
+		align-items: center;
+		border-bottom: none;
+	}
+	footer > *:last-child {
+		width: 100%;
+		padding-top: 12px;
+		border-top: 1px solid #fff;
+	}
 }
 
 @media screen and (min-width: 820px) {
-  header nav {
-    max-width: 1520px;
-    margin: auto;
-  }
-  header nav .menu .chaveMenu,
-  header nav .menu .iconeMenu {
-    display: none;
-  }
-  header nav .menu .chaveMenu ~ .itensMenu {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
-  header nav .menu .itensMenu {
-    position: relative;
-  }
-  header nav .menu .itensMenu ul {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-  }
-  header nav .menu .itensMenu ul li {
-    text-align: center;
-    margin: 12px;
-    margin-right: 24px;
-  }
-  header nav .menu .itensMenu ul li a {
-    font-size: 1em;
-  }
-  footer {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    padding-top: 24px;
-  }
-  footer > * {
-    width: calc(100% / 3);
-    height: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    border-bottom: none;
-  }
-  footer > *:last-child {
-    width: 100%;
-    padding-top: 12px;
-    border-top: 1px solid #fff;
-  }
+	header nav {
+		max-width: 1520px;
+		margin: auto;
+	}
+	header nav .menu .chaveMenu,
+	header nav .menu .iconeMenu {
+		display: none;
+	}
+	header nav .menu .chaveMenu ~ .itensMenu {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+	}
+	header nav .menu .itensMenu {
+		position: relative;
+	}
+	header nav .menu .itensMenu ul {
+		-webkit-box-orient: horizontal;
+		-webkit-box-direction: normal;
+		-ms-flex-direction: row;
+		flex-direction: row;
+	}
+	header nav .menu .itensMenu ul li {
+		text-align: center;
+		margin: 12px;
+		margin-right: 24px;
+	}
+	header nav .menu .itensMenu ul li a {
+		font-size: 1em;
+	}
+	footer {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-ms-flex-wrap: wrap;
+		flex-wrap: wrap;
+		-webkit-box-pack: justify;
+		-ms-flex-pack: justify;
+		justify-content: space-between;
+		-webkit-box-align: center;
+		-ms-flex-align: center;
+		align-items: center;
+		padding-top: 24px;
+	}
+	footer > * {
+		width: calc(100% / 3);
+		height: 100%;
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		-ms-flex-direction: column;
+		flex-direction: column;
+		-webkit-box-align: center;
+		-ms-flex-align: center;
+		align-items: center;
+		border-bottom: none;
+	}
+	footer > *:last-child {
+		width: 100%;
+		padding-top: 12px;
+		border-top: 1px solid #fff;
+	}
 }
 /*# sourceMappingURL=Style.css.map */
