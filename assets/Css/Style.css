@@ -197,6 +197,7 @@ header nav .menu .itensMenu {
   top: 0;
   left: 0;
   z-index: 10;
+  background: #fffd;
 }
 
 header nav .menu .itensMenu ul {
@@ -222,8 +223,9 @@ header nav .menu .itensMenu ul li {
 }
 
 header nav .menu .itensMenu ul li a {
-  color: #fff;
-  font-weight: 400;
+  color: #000;
+  font-weight: 800;
+  font-size: 2em;
 }
 
 header.topoPequeno {
@@ -243,7 +245,7 @@ header.topoPequeno nav .logo svg {
 }
 
 section {
-  padding: 24px 12px;
+  padding: 21px 13px;
   position: relative;
 }
 
@@ -251,22 +253,43 @@ div.link {
   padding-top: 72px;
 }
 
-section.a {
-  min-height: 500px;
-}
-
 section.a .texto {
   height: 100%;
-  display: -ms-grid;
-  display: grid;
+  padding: 13px 0;
+}
+
+section.a .texto h1 {
+  line-height: 1em;
+  margin: 21px 0 33px;
+  color: #d81f25;
+}
+
+section.a .texto .logo {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 21px 0;
+}
+
+section.a .texto .logo img {
+  width: 55px;
+  margin: 0 8px;
+}
+
+section.a .texto .logo img.p {
+  width: 34px;
 }
 
 section.a .videoBack {
-  width: 100%;
-  height: 600px;
-  position: absolute;
-  top: 0;
-  left: 0;
+  width: calc(100% + 26px);
+  height: 233px;
+  position: relative;
+  margin-top: -21px;
+  left: -13px;
   z-index: -10;
 }
 
@@ -277,24 +300,17 @@ section.a .videoBack video {
      object-fit: cover;
 }
 
-section.c .infoJardins {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 50% 50%;
-      grid-template-columns: 50% 50%;
-}
-
 section.c .infoJardins .texto {
-  padding: 34px;
+  padding: 13px;
 }
 
 section.c .infoJardins .texto h2 {
+  margin: 21px 0;
   color: #008241;
   font-weight: 100;
 }
 
 section.c .infoJardins .texto p {
-  margin-top: 55px;
   font-weight: 100;
 }
 
@@ -303,10 +319,16 @@ section.c .infoJardins .carrossel {
   position: relative;
 }
 
+section.c .infoJardins .carrossel.active {
+  width: 100%;
+  position: fixed;
+}
+
 section.c .infoJardins .carrossel .slider {
-  height: 377px;
-  overflow: hidden;
+  height: 233px;
   position: relative;
+  border-radius: 10px;
+  overflow: hidden;
 }
 
 section.c .infoJardins .carrossel .slider .slide {
@@ -339,9 +361,13 @@ section.c .infoJardins .carrossel .slider .slide.active img {
   transition: 0.5s ease, transform 4s ease-in, -webkit-transform 4s ease-in;
 }
 
+section.c .infoJardins .carrossel .modal {
+  display: none;
+}
+
 section.c .infoJardins .carrossel .control {
   width: 100%;
-  height: 377px;
+  height: 233px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -352,14 +378,83 @@ section.c .infoJardins .carrossel .control {
       -ms-flex-align: center;
           align-items: center;
   position: absolute;
+}
+
+section.c .infoJardins .carrossel .control.active {
+  width: 100%;
+  height: 100vh;
+}
+
+section.c .infoJardins .carrossel .control.active > * {
+  width: 89px;
+  height: 100%;
+  padding: 21px;
+  position: fixed;
+  top: 0;
+  z-index: 110;
+  border-radius: 0;
+}
+
+section.c .infoJardins .carrossel .control.active ~ .modal {
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: fixed;
   top: 0;
   left: 0;
+  z-index: 100;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: #000a;
+}
+
+section.c .infoJardins .carrossel .control.active ~ .modal .fechar {
+  width: 55px;
+  padding: 13px;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+  z-index: 120;
+}
+
+section.c .infoJardins .carrossel .control.active ~ .slider {
+  width: 55%;
+  height: 55%;
+  max-height: 610px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: 105;
+}
+
+section.c .infoJardins .carrossel .control.active ~ .slider .slide {
+  width: 100%;
 }
 
 section.c .infoJardins .carrossel .control > * {
-  width: 34px;
-  height: 34px;
-  margin: 13px;
+  width: 55px;
+  height: 100%;
+  padding: 13px;
+  position: absolute;
+  z-index: 5;
+  border-radius: 10px;
+}
+
+section.c .infoJardins .carrossel .control .prev {
+  left: 0;
+  background: -webkit-gradient(linear, left top, right top, from(#0008), to(transparent));
+  background: linear-gradient(90deg, #0008, transparent);
+}
+
+section.c .infoJardins .carrossel .control .next {
+  right: 0;
+  background: -webkit-gradient(linear, right top, left top, from(#0008), to(transparent));
+  background: linear-gradient(-90deg, #0008, transparent);
 }
 
 section.c .infoJardins .carrossel .indicator {
@@ -367,6 +462,8 @@ section.c .infoJardins .carrossel .indicator {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  border-radius: 10px;
+  overflow: hidden;
 }
 
 section.c .infoJardins .carrossel .indicator div {
@@ -416,11 +513,6 @@ section.db {
   background: #008241;
 }
 
-section.db .container {
-  -ms-grid-columns: 50% 50%;
-      grid-template-columns: 50% 50%;
-}
-
 section.db .formulario {
   padding: 13px;
   color: #fff;
@@ -464,6 +556,14 @@ footer > *:last-child {
   padding-bottom: 0;
   margin-bottom: 12px;
   border-bottom: none;
+}
+
+@media (orientation: portrait) {
+  section.c .infoJardins .carrossel .control.active ~ .slider {
+    width: 89%;
+    height: 34%;
+    max-height: 377px;
+  }
 }
 
 @media screen and (min-width: 650px) {
@@ -572,6 +672,167 @@ footer > *:last-child {
   }
   header nav .menu .itensMenu ul li a {
     font-size: 1em;
+  }
+  section.c .infoJardins {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 50% 50%;
+        grid-template-columns: 50% 50%;
+  }
+  section.c .infoJardins .carrossel {
+    width: 100%;
+    position: relative;
+  }
+  section.c .infoJardins .carrossel.active {
+    width: 100%;
+    position: fixed;
+  }
+  section.c .infoJardins .carrossel .slider {
+    height: 377px;
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  section.c .infoJardins .carrossel .slider .slide {
+    height: 100%;
+    position: absolute;
+  }
+  section.c .infoJardins .carrossel .slider .slide img {
+    opacity: 0;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-transition: 0.5s ease, -webkit-transform 4s ease-in;
+    transition: 0.5s ease, -webkit-transform 4s ease-in;
+    transition: 0.5s ease, transform 4s ease-in;
+    transition: 0.5s ease, transform 4s ease-in, -webkit-transform 4s ease-in;
+  }
+  section.c .infoJardins .carrossel .slider .slide.active {
+    display: block;
+    opacity: 1;
+  }
+  section.c .infoJardins .carrossel .slider .slide.active img {
+    opacity: 1;
+    -webkit-transform: scale(1.05);
+            transform: scale(1.05);
+    -webkit-transition: 0.5s ease, -webkit-transform 4s ease-in;
+    transition: 0.5s ease, -webkit-transform 4s ease-in;
+    transition: 0.5s ease, transform 4s ease-in;
+    transition: 0.5s ease, transform 4s ease-in, -webkit-transform 4s ease-in;
+  }
+  section.c .infoJardins .carrossel .control {
+    width: 100%;
+    height: 377px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    position: absolute;
+  }
+  section.c .infoJardins .carrossel .control .modal {
+    display: none;
+  }
+  section.c .infoJardins .carrossel .control.active {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    background: #000a;
+  }
+  section.c .infoJardins .carrossel .control.active .modal {
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+  section.c .infoJardins .carrossel .control.active .modal .fechar {
+    width: 89px;
+    padding: 21px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    -webkit-transform: translate(-50%);
+            transform: translate(-50%);
+    z-index: 120;
+  }
+  section.c .infoJardins .carrossel .control.active ~ .slider {
+    width: 100%;
+    max-width: 987px;
+    height: 89%;
+    max-height: 610px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    z-index: 110;
+  }
+  section.c .infoJardins .carrossel .control.active ~ .slider .slide {
+    width: 100%;
+  }
+  section.c .infoJardins .carrossel .control.active > * {
+    width: 89px;
+    height: 100%;
+    padding: 21px;
+  }
+  section.c .infoJardins .carrossel .control > * {
+    width: 55px;
+    height: 100%;
+    padding: 13px;
+    position: absolute;
+    z-index: 5;
+    border-radius: 10px;
+  }
+  section.c .infoJardins .carrossel .control .prev {
+    left: 0;
+    background: -webkit-gradient(linear, left top, right top, from(#0008), to(transparent));
+    background: linear-gradient(90deg, #0008, transparent);
+  }
+  section.c .infoJardins .carrossel .control .next {
+    right: 0;
+    background: -webkit-gradient(linear, right top, left top, from(#0008), to(transparent));
+    background: linear-gradient(-90deg, #0008, transparent);
+  }
+  section.c .infoJardins .carrossel .indicator {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  section.c .infoJardins .carrossel .indicator div {
+    width: 144px;
+    height: 89px;
+    margin: 2px;
+    overflow: hidden;
+    -webkit-transition: 0.5s ease;
+    transition: 0.5s ease;
+  }
+  section.c .infoJardins .carrossel .indicator div.active {
+    -webkit-box-shadow: 0px 0px 10px #000 unset;
+            box-shadow: 0px 0px 10px #000 unset;
+  }
+  section.c .infoJardins .carrossel .indicator div.active img {
+    opacity: 1;
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+    -webkit-transition: 0.5s ease;
+    transition: 0.5s ease;
+  }
+  section.c .infoJardins .carrossel .indicator div img {
+    opacity: 0.75;
+    -webkit-transition: 0.5s ease;
+    transition: 0.5s ease;
+  }
+  section.db .container {
+    -ms-grid-columns: 50% 50%;
+        grid-template-columns: 50% 50%;
   }
   footer {
     display: -webkit-box;

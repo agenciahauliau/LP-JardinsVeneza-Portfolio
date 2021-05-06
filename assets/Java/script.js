@@ -1,6 +1,8 @@
 const carrosseis = document.querySelectorAll(".carrossel");
 
 for (const carrossel of carrosseis) {
+  const controle = carrossel.querySelector(".control");
+  const modal = carrossel.querySelector(".modal");
   const prev = carrossel.querySelector(".prev");
   const next = carrossel.querySelector(".next");
   const slider = carrossel.querySelector(".slider");
@@ -8,11 +10,11 @@ for (const carrossel of carrosseis) {
   let index = 0;
 
   slider.addEventListener("click", function () {
-    for (const i of slider.children) {
-    //   i.classList.remove("active");
-    }
-    // slider.children[index].classList.add("active");
-	carrossel.classList.add("active");
+	controle.classList.add("active");
+  });
+
+  modal.addEventListener("click", function () {
+	controle.classList.remove("active");
   });
 
   prev.addEventListener("click", function () {

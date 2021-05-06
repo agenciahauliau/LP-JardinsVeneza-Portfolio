@@ -134,6 +134,7 @@ header {
         top: 0;
         left: 0;
         z-index: 10;
+        background: #fffd;
         ul {
           width: 100%;
           display: flex;
@@ -144,8 +145,9 @@ header {
             text-align: center;
             margin: 24px;
             a {
-              color: #fff;
-              font-weight: 400;
+              color: #000;
+              font-weight: 800;
+              font-size: 2em;
             }
           }
         }
@@ -169,7 +171,7 @@ header.topoPequeno {
 }
 
 section {
-  padding: 24px 12px;
+  padding: 21px 13px;
   position: relative;
 }
 
@@ -178,18 +180,35 @@ div.link {
 }
 
 section.a {
-  min-height: 500px;
   .texto {
     height: 100%;
-    display: grid;
+	padding: 13px 0;
+    h1 {
+      line-height: 1em;
+	  margin: 21px 0 33px;
+	  color: #d81f25;
+    }
+	.logo{
+		width: 100%;
+		display: flex;
+		align-items: center;
+		margin: 21px 0;
+		img{
+			width: 55px;
+			margin: 0 8px;
+			&.p{
+				width: 34px;
+			}
+		}
+	}
   }
   .videoBack {
-    width: 100%;
-    height: 600px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -10;
+    width: calc(100% + 26px);
+    height: 233px;
+    position: relative;
+    margin-top: -21px;
+    left: -13px;
+	z-index: -10;
     video {
       width: 100%;
       height: 100%;
@@ -200,27 +219,31 @@ section.a {
 
 section.c {
   .infoJardins {
-    display: grid;
-    grid-template-columns: 50% 50%;
-
     .texto {
-      padding: 34px;
+      padding: 13px;
       h2 {
+		margin: 21px 0;
         color: #008241;
         font-weight: 100;
       }
       p {
-        margin-top: 55px;
         font-weight: 100;
       }
     }
     .carrossel {
       width: 100%;
       position: relative;
+
+      &.active {
+        width: 100%;
+        position: fixed;
+      }
+
       .slider {
-        height: 377px;
-		overflow: hidden;
+        height: 233px;
         position: relative;
+        border-radius: 10px;
+        overflow: hidden;
         .slide {
           height: 100%;
           position: absolute;
@@ -240,25 +263,92 @@ section.c {
           }
         }
       }
+      .modal {
+        display: none;
+      }
+
       .control {
         width: 100%;
-        height: 377px;
+        height: 233px;
         display: flex;
         justify-content: space-between;
         align-items: center;
         position: absolute;
-        top: 0;
-        left: 0;
+
+        &.active {
+          width: 100%;
+          height: 100vh;
+
+          > * {
+            width: 89px;
+            height: 100%;
+            padding: 21px;
+            position: fixed;
+            top: 0;
+            z-index: 110;
+            border-radius: 0;
+          }
+
+          ~ .modal {
+            width: 100%;
+            height: 100%;
+            display: block;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 100;
+            display: flex;
+            background: #000a;
+
+            .fechar {
+              width: 55px;
+              padding: 13px;
+              position: absolute;
+              bottom: 0;
+              left: 50%;
+              transform: translate(-50%);
+              z-index: 120;
+            }
+          }
+
+          ~ .slider {
+            width: 55%;
+            height: 55%;
+            max-height: 610px;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 105;
+
+            .slide {
+              width: 100%;
+            }
+          }
+        }
 
         > * {
-          width: 34px;
-          height: 34px;
-          margin: 13px;
+          width: 55px;
+          height: 100%;
+          padding: 13px;
+          position: absolute;
+          z-index: 5;
+          border-radius: 10px;
+        }
+        .prev {
+          left: 0;
+          background: linear-gradient(90deg, #0008, transparent);
+        }
+        .next {
+          right: 0;
+          background: linear-gradient(-90deg, #0008, transparent);
         }
       }
       .indicator {
         width: 100%;
         display: flex;
+        border-radius: 10px;
+        overflow: hidden;
         div {
           width: 144px;
           height: 89px;
@@ -299,9 +389,6 @@ section.da {
 
 section.db {
   background: #008241;
-  .container {
-    grid-template-columns: 50% 50%;
-  }
   .formulario {
     padding: 13px;
     color: #fff;
@@ -346,6 +433,14 @@ footer {
     padding-bottom: 0;
     margin-bottom: 12px;
     border-bottom: none;
+  }
+}
+
+@media (orientation: portrait) {
+  section.c .infoJardins .carrossel .control.active ~ .slider {
+    width: 89%;
+    height: 34%;
+    max-height: 377px;
   }
 }
 
@@ -456,6 +551,158 @@ footer {
           }
         }
       }
+    }
+  }
+
+  section.c {
+    .infoJardins {
+      display: grid;
+      grid-template-columns: 50% 50%;
+
+      .carrossel {
+        width: 100%;
+        position: relative;
+
+        &.active {
+          width: 100%;
+          position: fixed;
+        }
+
+        .slider {
+          height: 377px;
+          position: relative;
+          border-radius: 10px;
+          overflow: hidden;
+          .slide {
+            height: 100%;
+            position: absolute;
+            img {
+              opacity: 0;
+              transform: scale(1);
+              transition: 0.5s ease, transform 4s ease-in;
+            }
+            &.active {
+              display: block;
+              opacity: 1;
+              img {
+                opacity: 1;
+                transform: scale(1.05);
+                transition: 0.5s ease, transform 4s ease-in;
+              }
+            }
+          }
+        }
+        .control {
+          width: 100%;
+          height: 377px;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          position: absolute;
+
+          .modal {
+            display: none;
+          }
+
+          &.active {
+            width: 100%;
+            height: 100vh;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 100;
+            background: #000a;
+
+            .modal {
+              width: 100%;
+              height: 100%;
+              display: block;
+
+              .fechar {
+                width: 89px;
+                padding: 21px;
+                position: absolute;
+                bottom: 0;
+                left: 50%;
+                transform: translate(-50%);
+                z-index: 120;
+              }
+            }
+
+            ~ .slider {
+              width: 100%;
+              max-width: 987px;
+              height: 89%;
+              max-height: 610px;
+              position: fixed;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+              z-index: 110;
+
+              .slide {
+                width: 100%;
+              }
+            }
+
+            > * {
+              width: 89px;
+              height: 100%;
+              padding: 21px;
+            }
+          }
+
+          > * {
+            width: 55px;
+            height: 100%;
+            padding: 13px;
+            position: absolute;
+            z-index: 5;
+            border-radius: 10px;
+          }
+          .prev {
+            left: 0;
+            background: linear-gradient(90deg, #0008, transparent);
+          }
+          .next {
+            right: 0;
+            background: linear-gradient(-90deg, #0008, transparent);
+          }
+        }
+        .indicator {
+          width: 100%;
+          display: flex;
+          border-radius: 10px;
+          overflow: hidden;
+          div {
+            width: 144px;
+            height: 89px;
+            margin: 2px;
+            overflow: hidden;
+            transition: 0.5s ease;
+            &.active {
+              box-shadow: 0px 0px 10px #000 unset;
+
+              img {
+                opacity: 1;
+                transform: scale(1.1);
+                transition: 0.5s ease;
+              }
+            }
+
+            img {
+              opacity: 0.75;
+              transition: 0.5s ease;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  section.db {
+    .container {
+      grid-template-columns: 50% 50%;
     }
   }
   footer {
