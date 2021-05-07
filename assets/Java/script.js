@@ -6,7 +6,8 @@ for (const carrossel of carrosseis) {
   const prev = carrossel.querySelector(".prev");
   const next = carrossel.querySelector(".next");
   const slider = carrossel.querySelector(".slider");
-  const indicator = carrossel.querySelector(".indicator .roll");
+  const indicator = carrossel.querySelector(".indicator ");
+  const indicatorRoll = carrossel.querySelector(".indicator .roll");
   let index = 0;
 
   slider.addEventListener("click", function () {
@@ -20,12 +21,14 @@ for (const carrossel of carrosseis) {
   prev.addEventListener("click", function () {
     prevSlide();
     updateCircleIndicator();
+    scrollIndicator();
     resetTimer();
   });
 
   next.addEventListener("click", function () {
     nextSlide();
     updateCircleIndicator();
+    scrollIndicator();
     resetTimer();
   });
 
@@ -60,21 +63,22 @@ for (const carrossel of carrosseis) {
       div.innerHTML = `<img id="${i}" src="${imagens[i]}" />`;
       div.addEventListener("click", function () {
         indicateSlide(this);
+        scrollIndicator();
       });
       div.id = i;
       if (i == 0) {
         div.className = "active";
       }
-      indicator.appendChild(div);
+      indicatorRoll.appendChild(div);
     }
   }
   circleIndicator();
 
   function updateCircleIndicator() {
-    for (const i of indicator.children) {
+    for (const i of indicatorRoll.children) {
       i.classList.remove("active");
     }
-    indicator.children[index].classList.add("active");
+    indicatorRoll.children[index].classList.add("active");
   }
 
   function changeSlide() {
@@ -96,9 +100,15 @@ for (const carrossel of carrosseis) {
     timer = setInterval(autoPlay, 4000);
   }
 
+  function scrollIndicator() {
+    var imageIndicator = carrossel.querySelector(".indicator .roll div").offsetWidth;
+    indicator.scrollLeft = indicatorRoll.children[index].id * imageIndicator - (imageIndicator / 2);
+  }
+
   function autoPlay() {
     nextSlide();
     updateCircleIndicator();
+    scrollIndicator();
   }
 
   let timer = setInterval(autoPlay, 4000);
