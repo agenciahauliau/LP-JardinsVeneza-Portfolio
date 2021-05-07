@@ -249,8 +249,8 @@ section {
   position: relative;
 }
 
-div.link {
-  padding-top: 72px;
+div.link:not(#inicio) {
+  padding-top: 55px;
 }
 
 section.a .texto {
@@ -531,6 +531,7 @@ section.c .infoJardins .carrossel .indicator {
   width: 100%;
   border-radius: 10px;
   overflow: scroll;
+  scroll-behavior: smooth;
 }
 
 section.c .infoJardins .carrossel .indicator .roll {
@@ -651,10 +652,16 @@ section.da {
   position: -webkit-sticky;
   position: sticky;
   bottom: 0;
-  z-index: 50;
+  z-index: 5;
 }
 
 section.da .linkForm {
+  padding: 8px;
+  background: #d81f25;
+  border-radius: 10px 10px 0 0;
+}
+
+section.da .linkForm a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -664,17 +671,14 @@ section.da .linkForm {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding: 5px;
-  background: #d81f25;
-  border-radius: 10px 10px 0 0;
 }
 
-section.da .linkForm svg {
+section.da .linkForm a svg {
   width: 33px;
   margin: 0 13px;
 }
 
-section.da .linkForm p {
+section.da .linkForm a p {
   padding: 5px;
   color: #fff;
   text-align: center;
@@ -694,8 +698,18 @@ section.db .formulario p {
   margin: 13px 0 34px;
 }
 
-section.db .formulario input,
-section.db .formulario textarea {
+section.db .formulario form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+section.db .formulario form input,
+section.db .formulario form textarea {
   width: 100%;
   padding: 5px 8px;
   margin: 8px 0;
@@ -704,31 +718,68 @@ section.db .formulario textarea {
   border: 1px solid #fff5;
 }
 
-section.db .formulario input::-webkit-input-placeholder,
-section.db .formulario textarea::-webkit-input-placeholder {
+section.db .formulario form input::-webkit-input-placeholder,
+section.db .formulario form textarea::-webkit-input-placeholder {
   color: #fff9;
 }
 
-section.db .formulario input:-ms-input-placeholder,
-section.db .formulario textarea:-ms-input-placeholder {
+section.db .formulario form input:-ms-input-placeholder,
+section.db .formulario form textarea:-ms-input-placeholder {
   color: #fff9;
 }
 
-section.db .formulario input::-ms-input-placeholder,
-section.db .formulario textarea::-ms-input-placeholder {
+section.db .formulario form input::-ms-input-placeholder,
+section.db .formulario form textarea::-ms-input-placeholder {
   color: #fff9;
 }
 
-section.db .formulario input::placeholder,
-section.db .formulario textarea::placeholder {
+section.db .formulario form input::placeholder,
+section.db .formulario form textarea::placeholder {
   color: #fff9;
 }
 
-section.db .formulario button {
-  padding: 5px 8px;
+section.db .formulario form .meioContato {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 0 34px;
+}
+
+section.db .formulario form .meioContato .option {
+  width: calc(100% / 3);
+  height: 20px;
+  position: relative;
+}
+
+section.db .formulario form .meioContato .option input {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  opacity: 0;
+}
+
+section.db .formulario form .meioContato .option input:checked ~ label {
   background: #d81f25;
+}
+
+section.db .formulario form .meioContato .option label {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 8px 13px;
+}
+
+section.db .formulario form button {
+  justify-self: flex-end;
+  padding: 8px 13px;
+  margin-top: 13px;
+  background: #b4050b;
   color: #fff;
   border-radius: 5px;
+  font-size: 1.25em;
 }
 
 footer {

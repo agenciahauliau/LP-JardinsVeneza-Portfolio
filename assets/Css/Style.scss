@@ -175,8 +175,8 @@ section {
   position: relative;
 }
 
-div.link {
-  padding-top: 72px;
+div.link:not(#inicio) {
+  padding-top: 55px;
 }
 
 section.a {
@@ -412,6 +412,7 @@ section.c {
         width: 100%;
         border-radius: 10px;
         overflow: scroll;
+        scroll-behavior: smooth;
         .roll {
           width: max-content;
           display: flex;
@@ -440,7 +441,7 @@ section.c {
       }
     }
     .plantas {
-     > div {
+      > div {
         margin: 13px 0;
         h3 {
           padding: 5px 13px;
@@ -458,14 +459,14 @@ section.c {
               display: none;
             }
 
-            .baseImg{
-              height:100%;
+            .baseImg {
+              height: 100%;
               position: absolute;
               top: 0;
-              left:0;
+              left: 0;
               z-index: -10;
               opacity: 0.1;
-              .baseImagem{
+              .baseImagem {
                 height: 100%;
               }
             }
@@ -512,23 +513,25 @@ section.da {
   padding: 0;
   position: sticky;
   bottom: 0;
-  z-index: 50;
+  z-index: 5;
   .linkForm {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 5px;
+    padding: 8px;
     background: #d81f25;
     border-radius: 10px 10px 0 0;
-    svg {
-      width: 33px;
-      margin: 0 13px;
-    }
-    p {
-      padding: 5px;
-      color: #fff;
-      text-align: center;
-      font-weight: 100;
+    a {
+      display: flex;
+    align-items: center;
+    justify-content: center;
+      svg {
+        width: 33px;
+        margin: 0 13px;
+      }
+      p {
+        padding: 5px;
+        color: #fff;
+        text-align: center;
+        font-weight: 100;
+      }
     }
   }
 }
@@ -542,24 +545,58 @@ section.db {
     p {
       margin: 13px 0 34px;
     }
-    input,
-    textarea {
-      width: 100%;
-      padding: 5px 8px;
-      margin: 8px 0;
-      background: none;
-      color: #fff;
-      border: 1px solid #fff5;
 
-      &::placeholder {
-        color: #fff9;
+    form {
+      display: flex;
+      flex-direction: column;
+      input,
+      textarea {
+        width: 100%;
+        padding: 5px 8px;
+        margin: 8px 0;
+        background: none;
+        color: #fff;
+        border: 1px solid #fff5;
+
+        &::placeholder {
+          color: #fff9;
+        }
       }
-    }
-    button {
-      padding: 5px 8px;
-      background: #d81f25;
-      color: #fff;
-      border-radius: 5px;
+      .meioContato {
+        display: flex;
+        margin: 0 0 34px;
+        .option {
+          width: calc(100% / 3);
+          height: 20px;
+          position: relative;
+          input {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
+            opacity: 0;
+            &:checked ~ label {
+              background: #d81f25;
+            }
+          }
+
+          label {
+            width: fit-content;
+            padding: 8px 13px;
+          }
+        }
+      }
+      button {
+        justify-self: flex-end;
+        padding: 8px 13px;
+        margin-top: 13px;
+        background: #b4050b;
+        color: #fff;
+        border-radius: 5px;
+        font-size: 1.25em;
+      }
     }
   }
 }
