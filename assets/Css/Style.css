@@ -570,15 +570,15 @@ section.c .infoJardins .carrossel .indicator .roll div img {
   transition: 0.5s ease;
 }
 
-section.c .infoJardins .plantas div {
+section.c .infoJardins .plantas > div {
   margin: 13px 0;
 }
 
-section.c .infoJardins .plantas div h3 {
+section.c .infoJardins .plantas > div h3 {
   padding: 5px 13px;
 }
 
-section.c .infoJardins .plantas div .imgPlantas {
+section.c .infoJardins .plantas > div .imgPlantas {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 50% 50%;
@@ -586,16 +586,64 @@ section.c .infoJardins .plantas div .imgPlantas {
   margin-top: 21px;
 }
 
-section.c .infoJardins .plantas div .imgPlantas div {
+section.c .infoJardins .plantas > div .imgPlantas .imagemLocal {
+  position: relative;
   padding: 3px;
 }
 
-section.c .infoJardins .plantas div .imgPlantas div .modalPlanta {
+section.c .infoJardins .plantas > div .imgPlantas .imagemLocal .modalPlanta {
   display: none;
 }
 
-section.c .infoJardins .plantas div .imgPlantas div.active .modalPlanta {
-  display: block;
+section.c .infoJardins .plantas > div .imgPlantas .imagemLocal .baseImg {
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -10;
+  opacity: 0.1;
+}
+
+section.c .infoJardins .plantas > div .imgPlantas .imagemLocal .baseImg .baseImagem {
+  height: 100%;
+}
+
+section.c .infoJardins .plantas > div .imgPlantas .imagemLocal.active .modalPlanta {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  background: #000d;
+}
+
+section.c .infoJardins .plantas > div .imgPlantas .imagemLocal.active .modalPlanta .fechar {
+  width: 55px;
+  padding: 13px;
+  z-index: 120;
+}
+
+section.c .infoJardins .plantas > div .imgPlantas .imagemLocal.active .imagem {
+  width: 55vw;
+  height: calc(55vw * 0.7);
+  max-height: 610px;
+  position: fixed;
+  top: 40%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: 105;
 }
 
 section.da {
@@ -715,6 +763,11 @@ footer > *:last-child {
     width: 89%;
     height: 34%;
     max-height: 377px;
+  }
+  section.c .infoJardins .plantas div .imgPlantas .imagemLocal.active .imagem {
+    width: 89vw;
+    height: calc(89vw * 0.7);
+    top: 50%;
   }
 }
 

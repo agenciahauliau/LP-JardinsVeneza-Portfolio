@@ -104,17 +104,18 @@ for (const carrossel of carrosseis) {
   let timer = setInterval(autoPlay, 4000);
 }
 
-const imgPlantas = document.querySelectorAll(".imgPlantas .imagem");
+const imgPlantas = document.querySelectorAll(".imagemLocal");
 
 for (const imgPlanta of imgPlantas) {
+  const imagemPlanta = imgPlanta.querySelector(".imagem");
   const modalPlanta = imgPlanta.querySelector(".modalPlanta");
 
-  imgPlanta.addEventListener("click", function () {
-    this.classList.add("active");
+  imagemPlanta.addEventListener("click", function () {
+    imgPlanta.classList.add("active");
   });
 
   modalPlanta.addEventListener("click", function () {
-    modalPlanta.classList.remove("active");
-    console.log(modalPlanta.element)
+    imgPlanta.classList.remove("active");
+    console.log(imgPlanta.classList)
   });
 }
