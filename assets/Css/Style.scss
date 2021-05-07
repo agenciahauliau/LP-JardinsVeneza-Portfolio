@@ -146,7 +146,7 @@ header {
             margin: 24px;
             a {
               color: #000;
-              font-weight: 800;
+              font-weight: 200;
               font-size: 2em;
             }
           }
@@ -208,7 +208,6 @@ section.a {
     position: relative;
     margin-top: -21px;
     left: -13px;
-    z-index: -10;
     video {
       width: 100%;
       height: 100%;
@@ -225,15 +224,15 @@ section.ba {
     font-weight: 100;
   }
   .itens {
-    display: grid;
-    grid-template-columns: 50% 50%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     margin: 21px 0;
-    justify-items: center;
+
     .item {
-      width: 100%;
-      max-width: 144px;
+      width: 144px;
       padding: 8px;
-      margin: 13px;
+      margin: 8px;
       background: #fff;
       border-radius: 5px;
       box-shadow: 0 0 5px 1px #0003;
@@ -413,6 +412,10 @@ section.c {
         border-radius: 10px;
         overflow: scroll;
         scroll-behavior: smooth;
+
+        &::-webkit-scrollbar {
+          display: none;
+        }
         .roll {
           width: max-content;
           display: flex;
@@ -520,8 +523,8 @@ section.da {
     border-radius: 10px 10px 0 0;
     a {
       display: flex;
-    align-items: center;
-    justify-content: center;
+      align-items: center;
+      justify-content: center;
       svg {
         width: 33px;
         margin: 0 13px;
@@ -537,7 +540,16 @@ section.da {
 }
 
 section.db {
+  color: #fff;
   background: #008241;
+
+  .texto {
+    padding: 21px;
+    height: fit-content;
+    p {
+      margin: 13px 0 34px;
+    }
+  }
   .formulario {
     padding: 13px;
     color: #fff;
@@ -601,6 +613,33 @@ section.db {
   }
 }
 
+section.e {
+  width: 55px;
+  height: 55px;
+  padding: 13px;
+  border-radius: 50%;
+  position: fixed;
+  bottom: 69px;
+  right: 21px;
+  z-index: 1000;
+  background: #1ebea5;
+  padding: 13px;
+  border-radius: 50%;
+  box-shadow:  2px 5px 10px 5px #0002;
+  a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    div {
+      width: 100%;
+      height: 100%;
+      svg {
+        fill: #fff;
+      }
+    }
+  }
+}
+
 footer {
   padding: 12px;
   background: #0001;
@@ -643,7 +682,7 @@ footer {
   }
 }
 
-@media screen and (min-width: 650px) {
+@media screen and (min-width: 740px) {
   header {
     nav {
       max-width: 1520px;
@@ -667,6 +706,7 @@ footer {
 
         .itensMenu {
           position: relative;
+          background: none;
           ul {
             flex-direction: row;
             li {
@@ -695,12 +735,161 @@ footer {
       }
     }
   }
+
+  section {
+    padding: 21px 13px;
+    position: relative;
+  }
+
+  div.link:not(#inicio) {
+    padding-top: 55px;
+  }
+
+  section.a {
+    .container {
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: flex-end;
+      align-items: center;
+    }
+    .texto {
+      width: 40%;
+      padding: 21px;
+      .logo {
+        img {
+          width: 89px;
+        }
+      }
+    }
+    .videoBack {
+      width: 60%;
+      padding: 21px;
+      height: 377px;
+      margin-top: 0;
+      left: 0;
+    }
+  }
+
+  section.ba {
+    background: linear-gradient(45deg, #b4050b, #d81f25);
+    h2 {
+      padding: 33px;
+    }
+    .itens {
+      justify-content: center;
+
+      .item {
+        width: 233px;
+        padding: 13px 34px;
+        margin: 13px;
+      }
+    }
+  }
+  section.bb {
+    .container {
+      display: grid;
+      grid-template-columns: 55% 45%;
+      align-items: center;
+    }
+    .imagemMapa {
+      padding: 13px 34px;
+      .imagem {
+        margin: 0;
+      }
+    }
+  }
+  section.c {
+    .infoJardins {
+      display: flex;
+      align-items: center;
+      flex-flow: row-reverse;
+      margin-bottom: 89px;
+      .texto {
+        padding: 34px;
+      }
+      .carrossel {
+        width: 55%;
+
+        .slider {
+          height: 377px;
+        }
+
+        .baseImg {
+          height: 377px;
+        }
+
+        .control {
+          height: 377px;
+        }
+      }
+
+      &.plant {
+        flex-wrap: wrap;
+        .texto {
+          width: 100%;
+        }
+        .plantas {
+          width: 100%;
+          display: flex;
+          > div {
+            width: calc(100% / 3);
+            margin: 13px 0;
+            text-align: center;
+            h3 {
+              font-weight: 100;
+            }
+            .imgPlantas {
+              padding: 0 21px 0 0;
+            }
+          }
+        }
+      }
+    }
+  }
+  section.da {
+    .container {
+      width: 50%;
+    }
+  }
+
+  section.db {
+    .container {
+      display: grid;
+      grid-template-columns: 55% 45%;
+      align-items: center;
+    }
+
+    .texto {
+      padding: 21px 34px 21px 21px;
+    }
+    .formulario {
+      padding: 33px 21px;
+      margin: 33px 21px;
+      box-shadow: 0 0 10px 5px #fff2;
+      border-radius: 20px;
+      form {
+        button {
+          width: fit-content;
+          align-self: center;
+          margin-top: 55px;
+          font-size: 1em;
+        }
+      }
+    }
+  }
+
+  
+
   footer {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     padding-top: 24px;
+
+    * {
+      font-size: 0.9em;
+    }
 
     > * {
       width: calc(100% / 3);
@@ -720,210 +909,4 @@ footer {
 }
 
 @media screen and (min-width: 820px) {
-  header {
-    nav {
-      max-width: 1520px;
-      margin: auto;
-
-      .menu {
-        .chaveMenu,
-        .iconeMenu {
-          display: none;
-        }
-
-        .chaveMenu ~ .itensMenu {
-          display: flex;
-        }
-
-        .itensMenu {
-          position: relative;
-          ul {
-            flex-direction: row;
-            li {
-              text-align: center;
-              margin: 12px;
-              margin-right: 24px;
-              a {
-                font-size: 1em;
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-
-  section.c {
-    .infoJardins {
-      display: grid;
-      grid-template-columns: 50% 50%;
-
-      .carrossel {
-        width: 100%;
-        position: relative;
-
-        &.active {
-          width: 100%;
-          position: fixed;
-        }
-
-        .slider {
-          height: 377px;
-          position: relative;
-          border-radius: 10px;
-          overflow: hidden;
-          .slide {
-            height: 100%;
-            position: absolute;
-            img {
-              opacity: 0;
-              transform: scale(1);
-              transition: 0.5s ease, transform 4s ease-in;
-            }
-            &.active {
-              display: block;
-              opacity: 1;
-              img {
-                opacity: 1;
-                transform: scale(1.05);
-                transition: 0.5s ease, transform 4s ease-in;
-              }
-            }
-          }
-        }
-        .control {
-          width: 100%;
-          height: 377px;
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-          position: absolute;
-
-          .modal {
-            display: none;
-          }
-
-          &.active {
-            width: 100%;
-            height: 100vh;
-            position: fixed;
-            top: 0;
-            left: 0;
-            z-index: 100;
-            background: #000a;
-
-            .modal {
-              width: 100%;
-              height: 100%;
-              display: block;
-
-              .fechar {
-                width: 89px;
-                padding: 21px;
-                position: absolute;
-                bottom: 0;
-                left: 50%;
-                transform: translate(-50%);
-                z-index: 120;
-              }
-            }
-
-            ~ .slider {
-              width: 100%;
-              max-width: 987px;
-              height: 89%;
-              max-height: 610px;
-              position: fixed;
-              top: 50%;
-              left: 50%;
-              transform: translate(-50%, -50%);
-              z-index: 110;
-
-              .slide {
-                width: 100%;
-              }
-            }
-
-            > * {
-              width: 89px;
-              height: 100%;
-              padding: 21px;
-            }
-          }
-
-          > * {
-            width: 55px;
-            height: 100%;
-            padding: 13px;
-            position: absolute;
-            z-index: 5;
-            border-radius: 10px;
-          }
-          .prev {
-            left: 0;
-            background: linear-gradient(90deg, #0008, transparent);
-          }
-          .next {
-            right: 0;
-            background: linear-gradient(-90deg, #0008, transparent);
-          }
-        }
-        .indicator {
-          width: 100%;
-          display: flex;
-          border-radius: 10px;
-          overflow: hidden;
-          div {
-            width: 144px;
-            height: 89px;
-            margin: 2px;
-            overflow: hidden;
-            transition: 0.5s ease;
-            &.active {
-              box-shadow: 0px 0px 10px #000 unset;
-
-              img {
-                opacity: 1;
-                transform: scale(1.1);
-                transition: 0.5s ease;
-              }
-            }
-
-            img {
-              opacity: 0.75;
-              transition: 0.5s ease;
-            }
-          }
-        }
-      }
-    }
-  }
-
-  section.db {
-    .container {
-      grid-template-columns: 50% 50%;
-    }
-  }
-  footer {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    padding-top: 24px;
-
-    > * {
-      width: calc(100% / 3);
-      height: 100%;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      border-bottom: none;
-    }
-
-    > *:last-child {
-      width: 100%;
-      padding-top: 12px;
-      border-top: 1px solid #fff;
-    }
-  }
 }
