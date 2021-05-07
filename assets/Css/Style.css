@@ -7,7 +7,7 @@ header {
   position: sticky;
   top: 0;
   z-index: 10;
-  background: #008241;
+  background: #fffd;
   -webkit-transition: 0.2 ease;
   transition: 0.2 ease;
 }
@@ -16,16 +16,16 @@ header nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   padding: 8px;
 }
 
-header nav .logo svg {
+header nav .logo img {
   -webkit-transition: 0.5s ease;
   transition: 0.5s ease;
   width: 100px;
@@ -87,7 +87,7 @@ header nav .menu .iconeMenu .x .line {
 
 header nav .menu .iconeMenu .line {
   fill: none;
-  stroke: black;
+  stroke: #000;
   stroke-width: 6px;
   stroke-linecap: round;
   stroke-linejoin: round;
@@ -300,14 +300,67 @@ section.a .videoBack video {
      object-fit: cover;
 }
 
+section.ba {
+  background: linear-gradient(45deg, #b4050b, #d81f25);
+}
+
+section.ba h2 {
+  color: #fff;
+  font-size: 1.5em;
+  font-weight: 100;
+}
+
+section.ba .itens {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 50% 50%;
+      grid-template-columns: 50% 50%;
+  margin: 21px 0;
+  justify-items: center;
+}
+
+section.ba .itens .item {
+  width: 100%;
+  max-width: 144px;
+  padding: 8px;
+  margin: 13px;
+  background: #fff;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 0 5px 1px #0003;
+          box-shadow: 0 0 5px 1px #0003;
+}
+
+section.ba .itens .item .icon {
+  padding: 8px 33px;
+}
+
+section.ba .itens .item p {
+  text-align: center;
+  font-weight: 800;
+}
+
+section.bb .imagemMapa .imagem {
+  margin: 0 0 21px;
+}
+
 section.c .infoJardins .texto {
   padding: 13px;
 }
 
 section.c .infoJardins .texto h2 {
   margin: 21px 0;
+  position: relative;
   color: #008241;
-  font-weight: 100;
+}
+
+section.c .infoJardins .texto h2::before {
+  content: " ";
+  width: 144px;
+  height: 2px;
+  position: absolute;
+  bottom: -8px;
+  left: -13px;
+  background: #d81f25;
 }
 
 section.c .infoJardins .texto p {
@@ -325,8 +378,11 @@ section.c .infoJardins .carrossel.active {
 }
 
 section.c .infoJardins .carrossel .slider {
+  width: 100%;
   height: 233px;
-  position: relative;
+  position: absolute;
+  top: 0;
+  left: 0;
   border-radius: 10px;
   overflow: hidden;
 }
@@ -363,6 +419,20 @@ section.c .infoJardins .carrossel .slider .slide.active img {
 
 section.c .infoJardins .carrossel .modal {
   display: none;
+}
+
+section.c .infoJardins .carrossel .baseImg {
+  width: 100%;
+  height: 233px;
+  position: relative;
+  border-radius: 10px;
+}
+
+section.c .infoJardins .carrossel .baseImg .imagem {
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  opacity: 0.1;
 }
 
 section.c .infoJardins .carrossel .control {
@@ -459,14 +529,20 @@ section.c .infoJardins .carrossel .control .next {
 
 section.c .infoJardins .carrossel .indicator {
   width: 100%;
+  border-radius: 10px;
+  overflow: scroll;
+}
+
+section.c .infoJardins .carrossel .indicator .roll {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  border-radius: 10px;
-  overflow: hidden;
 }
 
-section.c .infoJardins .carrossel .indicator div {
+section.c .infoJardins .carrossel .indicator .roll div {
   width: 144px;
   height: 89px;
   margin: 2px;
@@ -475,12 +551,12 @@ section.c .infoJardins .carrossel .indicator div {
   transition: 0.5s ease;
 }
 
-section.c .infoJardins .carrossel .indicator div.active {
+section.c .infoJardins .carrossel .indicator .roll div.active {
   -webkit-box-shadow: 0px 0px 10px #000 unset;
           box-shadow: 0px 0px 10px #000 unset;
 }
 
-section.c .infoJardins .carrossel .indicator div.active img {
+section.c .infoJardins .carrossel .indicator .roll div.active img {
   opacity: 1;
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
@@ -488,10 +564,38 @@ section.c .infoJardins .carrossel .indicator div.active img {
   transition: 0.5s ease;
 }
 
-section.c .infoJardins .carrossel .indicator div img {
+section.c .infoJardins .carrossel .indicator .roll div img {
   opacity: 0.75;
   -webkit-transition: 0.5s ease;
   transition: 0.5s ease;
+}
+
+section.c .infoJardins .plantas div {
+  margin: 13px 0;
+}
+
+section.c .infoJardins .plantas div h3 {
+  padding: 5px 13px;
+}
+
+section.c .infoJardins .plantas div .imgPlantas {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 50% 50%;
+      grid-template-columns: 50% 50%;
+  margin-top: 21px;
+}
+
+section.c .infoJardins .plantas div .imgPlantas div {
+  padding: 3px;
+}
+
+section.c .infoJardins .plantas div .imgPlantas div .modalPlanta {
+  display: none;
+}
+
+section.c .infoJardins .plantas div .imgPlantas div.active .modalPlanta {
+  display: block;
 }
 
 section.da {
@@ -499,14 +603,34 @@ section.da {
   position: -webkit-sticky;
   position: sticky;
   bottom: 0;
+  z-index: 50;
 }
 
-section.da h4 {
+section.da .linkForm {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   padding: 5px;
   background: #d81f25;
+  border-radius: 10px 10px 0 0;
+}
+
+section.da .linkForm svg {
+  width: 33px;
+  margin: 0 13px;
+}
+
+section.da .linkForm p {
+  padding: 5px;
   color: #fff;
   text-align: center;
-  border-radius: 10px 10px 0 0;
+  font-weight: 100;
 }
 
 section.db {
@@ -525,10 +649,38 @@ section.db .formulario p {
 section.db .formulario input,
 section.db .formulario textarea {
   width: 100%;
+  padding: 5px 8px;
   margin: 8px 0;
   background: none;
   color: #fff;
   border: 1px solid #fff5;
+}
+
+section.db .formulario input::-webkit-input-placeholder,
+section.db .formulario textarea::-webkit-input-placeholder {
+  color: #fff9;
+}
+
+section.db .formulario input:-ms-input-placeholder,
+section.db .formulario textarea:-ms-input-placeholder {
+  color: #fff9;
+}
+
+section.db .formulario input::-ms-input-placeholder,
+section.db .formulario textarea::-ms-input-placeholder {
+  color: #fff9;
+}
+
+section.db .formulario input::placeholder,
+section.db .formulario textarea::placeholder {
+  color: #fff9;
+}
+
+section.db .formulario button {
+  padding: 5px 8px;
+  background: #d81f25;
+  color: #fff;
+  border-radius: 5px;
 }
 
 footer {
@@ -537,7 +689,7 @@ footer {
   text-align: center;
 }
 
-footer .logo svg {
+footer .logo img {
   width: 125px;
 }
 
