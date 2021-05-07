@@ -224,7 +224,7 @@ header nav .menu .itensMenu ul li {
 
 header nav .menu .itensMenu ul li a {
   color: #000;
-  font-weight: 200;
+  font-weight: 800;
   font-size: 2em;
 }
 
@@ -290,6 +290,7 @@ section.a .videoBack {
   position: relative;
   margin-top: -21px;
   left: -13px;
+  z-index: -10;
 }
 
 section.a .videoBack video {
@@ -310,21 +311,19 @@ section.ba h2 {
 }
 
 section.ba .itens {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 50% 50%;
+      grid-template-columns: 50% 50%;
   margin: 21px 0;
+  justify-items: center;
 }
 
 section.ba .itens .item {
-  width: 144px;
+  width: 100%;
+  max-width: 144px;
   padding: 8px;
-  margin: 8px;
+  margin: 13px;
   background: #fff;
   border-radius: 5px;
   -webkit-box-shadow: 0 0 5px 1px #0003;
@@ -535,10 +534,6 @@ section.c .infoJardins .carrossel .indicator {
   scroll-behavior: smooth;
 }
 
-section.c .infoJardins .carrossel .indicator::-webkit-scrollbar {
-  display: none;
-}
-
 section.c .infoJardins .carrossel .indicator .roll {
   width: -webkit-max-content;
   width: -moz-max-content;
@@ -691,19 +686,7 @@ section.da .linkForm a p {
 }
 
 section.db {
-  color: #fff;
   background: #008241;
-}
-
-section.db .texto {
-  padding: 21px;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
-}
-
-section.db .texto p {
-  margin: 13px 0 34px;
 }
 
 section.db .formulario {
@@ -799,37 +782,6 @@ section.db .formulario form button {
   font-size: 1.25em;
 }
 
-section.e {
-  width: 55px;
-  height: 55px;
-  padding: 13px;
-  border-radius: 50%;
-  position: fixed;
-  bottom: 69px;
-  right: 21px;
-  z-index: 1000;
-  background: #1ebea5;
-  padding: 13px;
-  border-radius: 50%;
-  -webkit-box-shadow: 2px 5px 10px 5px #0002;
-          box-shadow: 2px 5px 10px 5px #0002;
-}
-
-section.e a {
-  display: block;
-  width: 100%;
-  height: 100%;
-}
-
-section.e a div {
-  width: 100%;
-  height: 100%;
-}
-
-section.e a div svg {
-  fill: #fff;
-}
-
 footer {
   padding: 12px;
   background: #0001;
@@ -870,7 +822,7 @@ footer > *:last-child {
   }
 }
 
-@media screen and (min-width: 740px) {
+@media screen and (min-width: 650px) {
   header nav {
     max-width: 1520px;
     margin: auto;
@@ -889,7 +841,6 @@ footer > *:last-child {
   }
   header nav .menu .itensMenu {
     position: relative;
-    background: none;
   }
   header nav .menu .itensMenu ul {
     -webkit-box-orient: horizontal;
@@ -911,157 +862,6 @@ footer > *:last-child {
   header.topoPequeno nav .itensMenu {
     background: none;
   }
-  section {
-    padding: 21px 13px;
-    position: relative;
-  }
-  div.link:not(#inicio) {
-    padding-top: 55px;
-  }
-  section.a .container {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: reverse;
-        -ms-flex-direction: row-reverse;
-            flex-direction: row-reverse;
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: flex-end;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-  section.a .texto {
-    width: 40%;
-    padding: 21px;
-  }
-  section.a .texto .logo img {
-    width: 89px;
-  }
-  section.a .videoBack {
-    width: 60%;
-    padding: 21px;
-    height: 377px;
-    margin-top: 0;
-    left: 0;
-  }
-  section.ba {
-    background: linear-gradient(45deg, #b4050b, #d81f25);
-  }
-  section.ba h2 {
-    padding: 33px;
-  }
-  section.ba .itens {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
-  section.ba .itens .item {
-    width: 233px;
-    padding: 13px 34px;
-    margin: 13px;
-  }
-  section.bb .container {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: 55% 45%;
-        grid-template-columns: 55% 45%;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-  section.bb .imagemMapa {
-    padding: 13px 34px;
-  }
-  section.bb .imagemMapa .imagem {
-    margin: 0;
-  }
-  section.c .infoJardins {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: reverse;
-        -ms-flex-flow: row-reverse;
-            flex-flow: row-reverse;
-    margin-bottom: 89px;
-  }
-  section.c .infoJardins .texto {
-    padding: 34px;
-  }
-  section.c .infoJardins .carrossel {
-    width: 55%;
-  }
-  section.c .infoJardins .carrossel .slider {
-    height: 377px;
-  }
-  section.c .infoJardins .carrossel .baseImg {
-    height: 377px;
-  }
-  section.c .infoJardins .carrossel .control {
-    height: 377px;
-  }
-  section.c .infoJardins.plant {
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-  }
-  section.c .infoJardins.plant .texto {
-    width: 100%;
-  }
-  section.c .infoJardins.plant .plantas {
-    width: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
-  section.c .infoJardins.plant .plantas > div {
-    width: calc(100% / 3);
-    margin: 13px 0;
-    text-align: center;
-  }
-  section.c .infoJardins.plant .plantas > div h3 {
-    font-weight: 100;
-  }
-  section.c .infoJardins.plant .plantas > div .imgPlantas {
-    padding: 0 21px 0 0;
-  }
-  section.da .container {
-    width: 50%;
-  }
-  section.db .container {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: 55% 45%;
-        grid-template-columns: 55% 45%;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-  section.db .texto {
-    padding: 21px 34px 21px 21px;
-  }
-  section.db .formulario {
-    padding: 33px 21px;
-    margin: 33px 21px;
-    -webkit-box-shadow: 0 0 10px 5px #fff2;
-            box-shadow: 0 0 10px 5px #fff2;
-    border-radius: 20px;
-  }
-  section.db .formulario form button {
-    width: -webkit-fit-content;
-    width: -moz-fit-content;
-    width: fit-content;
-    -ms-flex-item-align: center;
-        -ms-grid-row-align: center;
-        align-self: center;
-    margin-top: 55px;
-    font-size: 1em;
-  }
   footer {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1076,8 +876,233 @@ footer > *:last-child {
             align-items: center;
     padding-top: 24px;
   }
-  footer * {
-    font-size: 0.9em;
+  footer > * {
+    width: calc(100% / 3);
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    border-bottom: none;
+  }
+  footer > *:last-child {
+    width: 100%;
+    padding-top: 12px;
+    border-top: 1px solid #fff;
+  }
+}
+
+@media screen and (min-width: 820px) {
+  header nav {
+    max-width: 1520px;
+    margin: auto;
+  }
+  header nav .menu .chaveMenu,
+  header nav .menu .iconeMenu {
+    display: none;
+  }
+  header nav .menu .chaveMenu ~ .itensMenu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  header nav .menu .itensMenu {
+    position: relative;
+  }
+  header nav .menu .itensMenu ul {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  header nav .menu .itensMenu ul li {
+    text-align: center;
+    margin: 12px;
+    margin-right: 24px;
+  }
+  header nav .menu .itensMenu ul li a {
+    font-size: 1em;
+  }
+  section.c .infoJardins {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 50% 50%;
+        grid-template-columns: 50% 50%;
+  }
+  section.c .infoJardins .carrossel {
+    width: 100%;
+    position: relative;
+  }
+  section.c .infoJardins .carrossel.active {
+    width: 100%;
+    position: fixed;
+  }
+  section.c .infoJardins .carrossel .slider {
+    height: 377px;
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  section.c .infoJardins .carrossel .slider .slide {
+    height: 100%;
+    position: absolute;
+  }
+  section.c .infoJardins .carrossel .slider .slide img {
+    opacity: 0;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-transition: 0.5s ease, -webkit-transform 4s ease-in;
+    transition: 0.5s ease, -webkit-transform 4s ease-in;
+    transition: 0.5s ease, transform 4s ease-in;
+    transition: 0.5s ease, transform 4s ease-in, -webkit-transform 4s ease-in;
+  }
+  section.c .infoJardins .carrossel .slider .slide.active {
+    display: block;
+    opacity: 1;
+  }
+  section.c .infoJardins .carrossel .slider .slide.active img {
+    opacity: 1;
+    -webkit-transform: scale(1.05);
+            transform: scale(1.05);
+    -webkit-transition: 0.5s ease, -webkit-transform 4s ease-in;
+    transition: 0.5s ease, -webkit-transform 4s ease-in;
+    transition: 0.5s ease, transform 4s ease-in;
+    transition: 0.5s ease, transform 4s ease-in, -webkit-transform 4s ease-in;
+  }
+  section.c .infoJardins .carrossel .control {
+    width: 100%;
+    height: 377px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    position: absolute;
+  }
+  section.c .infoJardins .carrossel .control .modal {
+    display: none;
+  }
+  section.c .infoJardins .carrossel .control.active {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    background: #000a;
+  }
+  section.c .infoJardins .carrossel .control.active .modal {
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+  section.c .infoJardins .carrossel .control.active .modal .fechar {
+    width: 89px;
+    padding: 21px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    -webkit-transform: translate(-50%);
+            transform: translate(-50%);
+    z-index: 120;
+  }
+  section.c .infoJardins .carrossel .control.active ~ .slider {
+    width: 100%;
+    max-width: 987px;
+    height: 89%;
+    max-height: 610px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    z-index: 110;
+  }
+  section.c .infoJardins .carrossel .control.active ~ .slider .slide {
+    width: 100%;
+  }
+  section.c .infoJardins .carrossel .control.active > * {
+    width: 89px;
+    height: 100%;
+    padding: 21px;
+  }
+  section.c .infoJardins .carrossel .control > * {
+    width: 55px;
+    height: 100%;
+    padding: 13px;
+    position: absolute;
+    z-index: 5;
+    border-radius: 10px;
+  }
+  section.c .infoJardins .carrossel .control .prev {
+    left: 0;
+    background: -webkit-gradient(linear, left top, right top, from(#0008), to(transparent));
+    background: linear-gradient(90deg, #0008, transparent);
+  }
+  section.c .infoJardins .carrossel .control .next {
+    right: 0;
+    background: -webkit-gradient(linear, right top, left top, from(#0008), to(transparent));
+    background: linear-gradient(-90deg, #0008, transparent);
+  }
+  section.c .infoJardins .carrossel .indicator {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  section.c .infoJardins .carrossel .indicator div {
+    width: 144px;
+    height: 89px;
+    margin: 2px;
+    overflow: hidden;
+    -webkit-transition: 0.5s ease;
+    transition: 0.5s ease;
+  }
+  section.c .infoJardins .carrossel .indicator div.active {
+    -webkit-box-shadow: 0px 0px 10px #000 unset;
+            box-shadow: 0px 0px 10px #000 unset;
+  }
+  section.c .infoJardins .carrossel .indicator div.active img {
+    opacity: 1;
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+    -webkit-transition: 0.5s ease;
+    transition: 0.5s ease;
+  }
+  section.c .infoJardins .carrossel .indicator div img {
+    opacity: 0.75;
+    -webkit-transition: 0.5s ease;
+    transition: 0.5s ease;
+  }
+  section.db .container {
+    -ms-grid-columns: 50% 50%;
+        grid-template-columns: 50% 50%;
+  }
+  footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding-top: 24px;
   }
   footer > * {
     width: calc(100% / 3);
