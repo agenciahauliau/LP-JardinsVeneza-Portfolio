@@ -865,9 +865,13 @@ footer {
     .formulario {
       padding: 33px 21px;
       margin: 33px 21px;
+      background: #0f7a45;
       box-shadow: 0 0 10px 5px #fff2;
       border-radius: 20px;
       form {
+        * {
+          font-weight: 200;
+        }
         button {
           width: fit-content;
           align-self: center;

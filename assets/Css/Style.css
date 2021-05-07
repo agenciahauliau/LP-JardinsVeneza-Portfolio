@@ -1048,9 +1048,13 @@ footer > *:last-child {
   section.db .formulario {
     padding: 33px 21px;
     margin: 33px 21px;
+    background: #0f7a45;
     -webkit-box-shadow: 0 0 10px 5px #fff2;
             box-shadow: 0 0 10px 5px #fff2;
     border-radius: 20px;
+  }
+  section.db .formulario form * {
+    font-weight: 200;
   }
   section.db .formulario form button {
     width: -webkit-fit-content;
