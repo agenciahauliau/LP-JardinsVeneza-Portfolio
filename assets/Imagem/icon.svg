@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg enable-background="new 0 0 500 500" version="1.1" viewBox="0 0 500 500" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
+    <rect fill="#272727" width="500" height="500" />
+    <path fill="#db0423" d="m100.33 90.72h298.71c5.43 0 9.85 4.45 9.85 9.85v298.71c0 5.43-4.41 9.85-9.85 9.85h-298.71c-5.42 0-9.85-4.41-9.85-9.85v-298.71c0-5.4 4.42-9.85 9.85-9.85z" />
+    <path fill="#fff" d="m190.54 207.67h45.46v101.15h132.93v45.46h-178.39v-146.61zm-61.55-62.08h241.4v141.73h-117.65v-45.45h72.2v-50.82h-150.5v163.23h-45.46v-208.69z" />
+</svg>
