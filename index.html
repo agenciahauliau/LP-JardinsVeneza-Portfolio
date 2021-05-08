@@ -4,10 +4,10 @@
 <head>
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<link rel="manifest" href="manifest.json" />
+	<link rel="manifest" href="site.webmanifest" type="application/manifest+json">
+	<meta name="theme-color" content="#d81f25">
 	<link rel="apple-touch-icon" href="assets/Imagem/fotos/FGR-Jardins-Veneza-fachada-garagem.webp" />
 	<meta http-equiv="Cache-Control" content="must-revalidate" />
-	<meta name="theme-color" content="#ff0800" />
 	<title>FGR Jardins Veneza</title>
 	<meta name="twitter:title" content="FGR Jardins Veneza" />
 	<meta name="twitter:card" content="summary_large_image" />
@@ -22,7 +22,7 @@
 	<meta name="twitter:image" content="assets/Imagem/fotos/FGR-Jardins-Veneza-fachada-garagem.webp" />
 	<meta property="og:title" content="FGR Jardins Veneza" />
 	<link rel="icon" sizes="16x16 48x48 72x72 96x96 128x128 192x192 256x256 512x512"
-		href="assets/Imagem/icon.svg" />
+		href="data:image/svg+xml;utf8,%3Csvg enable-background='new 0 0 500 500' version='1.1' viewBox='0 0 500 500' xml:space='preserve' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='%23DB0423' d='M15.22,0h468.93c8.53,0,15.46,6.99,15.46,15.46v468.93c0,8.53-6.93,15.46-15.46,15.46H15.22 c-8.51,0-15.46-6.93-15.46-15.46V15.46C-0.24,6.99,6.7,0,15.22,0z'/%3E%3Cpath fill='%23FFFFFF' d='m156.85 183.6h71.36v158.8h208.69v71.36h-280.05v-230.16zm-96.64-97.46h378.96v222.49h-184.7v-71.35h113.34v-79.78h-236.24v256.25h-71.36v-327.61z'/%3E%3C/svg%3E" />
 	<script>
 		if ('serviceWorker' in navigator) {
 			navigator.serviceWorker
@@ -133,10 +133,12 @@
 	<div class="link" id="inicio"></div>
 	<header>
 		<nav>
-			<div class="logo"> <a href="#inicio"> <img src="assets/Imagem/portfolio-imoveis-logo-p.webp" /> </a> </div>
+			<div class="logo"> <a href="#inicio"> <img width="400" height="65"
+						src="assets/Imagem/portfolio-imoveis-logo-p.webp" alt="Portfolio Imóveis"
+						title="Portfolio Imóveis" /> </a> </div>
 			<div class="menu">
+				<input id="chaveMenu" class="chaveMenu" type="checkbox" />
 				<label for="chaveMenu">chaveMenu</label>
-				<input name="chaveMenu" id="chaveMenu" class="chaveMenu" type="checkbox" />
 				<div class="iconeMenu">
 					<div class="plate plate4">
 						<svg class="burger" version="1.1" viewBox="0 0 100 100">
@@ -183,9 +185,12 @@
 			<div class="texto">
 				<h1>Um novo lançamento Casas Jardins</h1>
 				<div class="logo">
-					<img src="assets/Imagem/logFGR.webp" />
-					<img class="p" src="assets/Imagem/selo-jardins2.webp" />
-					<img src="assets/Imagem/Logo-casas-Jardins.webp" />
+					<img width="1647" height="927" src="assets/Imagem/logFGR.webp" alt="FGR Incorporações"
+						title="FGR Incorporações" />
+					<img width="400" height="65" class="p" src="assets/Imagem/selo-jardins2.webp" alt="Jardins FGR"
+						title="Jardins FGR" />
+					<img width="116" height="157" src="assets/Imagem/Logo-casas-Jardins.webp" alt="Casas Jardins FGR"
+						title="Casas Jardins FGR" />
 				</div>
 				<p>
 					Casas térreas e sobrados com opções diferenciadas de fachadas para você escolher, e a possibilidade
@@ -299,13 +304,15 @@
 		<div class="container">
 			<div class="imagemMapa">
 				<div class="imagem">
-					<img src="assets/Imagem/Mapa.webp" />
+					<img width="910" height="570" src="assets/Imagem/Mapa.webp" alt="Mapa Jardins Veneza"
+						title="Mapa Jardins Veneza" />
 				</div>
 			</div>
 			<div class="texto">
 				<p>
 					Pra morar bem não basta a casa ideal. O Jardins Veneza está localizado a apenas 5 minutos do Buriti
-					Shopping, em frente ao Jardins Marselha (projeto totalmente vendido), te oferecendo toda a comodidade
+					Shopping, em frente ao Jardins Marselha (projeto totalmente vendido), te oferecendo toda a
+					comodidade
 					que você e sua família merecem. São vários pontos comerciais como farmácias, supermercados, bancos,
 					restaurantes e bares na região, alinhados a tudo que só um Condomínio Jardins FGR trás.
 				</p>
@@ -361,34 +368,53 @@
 					</div>
 					<div class="slider">
 						<div class="slide active">
-							<img src="./assets/Imagem/fotos/FGR-Jardins-Veneza-cozinha-bancada.webp" />
+							<img width="1500" height="999"
+								src="./assets/Imagem/fotos/FGR-Jardins-Veneza-cozinha-bancada.webp"
+								alt="FGR Jardins Veneza cozinha bancada" title="FGR Jardins Veneza cozinha bancada" />
 						</div>
 						<div class="slide active">
-							<img src="./assets/Imagem/fotos/FGR-Jardins-Veneza-cozinha-decorada.webp" />
+							<img width="1500" height="1000"
+								src="./assets/Imagem/fotos/FGR-Jardins-Veneza-cozinha-decorada.webp"
+								alt="FGR Jardins Veneza cozinha decorada" title="FGR Jardins Veneza cozinha decorada" />
 						</div>
 						<div class="slide active">
-							<img src="./assets/Imagem/fotos/FGR-Jardins-Veneza-escritorio.webp" />
+							<img width="1500" height="1000"
+								src="./assets/Imagem/fotos/FGR-Jardins-Veneza-escritorio.webp"
+								alt="FGR Jardins Veneza escritório" title="FGR Jardins Veneza escritório" />
 						</div>
 						<div class="slide active">
-							<img src="./assets/Imagem/fotos/FGR-Jardins-Veneza-home-office-sala.webp" />
+							<img width="1500" height="1000"
+								src="./assets/Imagem/fotos/FGR-Jardins-Veneza-home-office-sala.webp"
+								alt="FGR Jardins Veneza sala Home Office" title="FGR Jardins Veneza sala Home Office" />
 						</div>
 						<div class="slide active">
-							<img src="./assets/Imagem/fotos/FGR-Jardins-Veneza-quarto-menino.webp" />
+							<img width="1500" height="1000"
+								src="./assets/Imagem/fotos/FGR-Jardins-Veneza-quarto-menino.webp"
+								alt="FGR Jardins Veneza quarto criança / menino"
+								title="FGR Jardins Veneza quarto criança / menino" />
 						</div>
 						<div class="slide active">
-							<img src="./assets/Imagem/fotos/FGR-Jardins-Veneza-quarto.webp" />
+							<img width="1500" height="999" src="./assets/Imagem/fotos/FGR-Jardins-Veneza-quarto.webp"
+								alt="FGR Jardins Veneza quarto" title="FGR Jardins Veneza quarto" />
 						</div>
 						<div class="slide active">
-							<img src="./assets/Imagem/fotos/FGR-Jardins-Veneza-sala-2-ambientes.webp" />
+							<img width="1500" height="1000"
+								src="./assets/Imagem/fotos/FGR-Jardins-Veneza-sala-2-ambientes.webp"
+								alt="FGR Jardins Veneza Sala dois ambientes"
+								title="FGR Jardins Veneza Sala dois ambientes" />
 						</div>
 						<div class="slide active">
-							<img src="./assets/Imagem/fotos/FGR-Jardins-Veneza-sala-de-jantar.webp" />
+							<img width="1500" height="999"
+								src="./assets/Imagem/fotos/FGR-Jardins-Veneza-sala-de-jantar.webp"
+								alt="FGR Jardins Veneza sala de jantar" title="FGR Jardins Veneza sala de jantar" />
 						</div>
 						<div class="slide active">
-							<img src="./assets/Imagem/fotos/FGR-Jardins-Veneza-suite-2.webp" />
+							<img width="1500" height="999" src="./assets/Imagem/fotos/FGR-Jardins-Veneza-suite-2.webp"
+								alt="FGR Jardins Veneza Suíte" title="FGR Jardins Veneza Suíte" />
 						</div>
 						<div class="slide active">
-							<img src="./assets/Imagem/fotos/FGR-Jardins-Veneza-suite.webp" />
+							<img width="1500" height="999" src="./assets/Imagem/fotos/FGR-Jardins-Veneza-suite.webp"
+								alt="FGR Jardins Veneza Suíte" title="FGR Jardins Veneza Suíte" />
 						</div>
 					</div>
 					<div class="indicator">
@@ -423,13 +449,15 @@
 					</p>
 				</div>
 
-				<div class="carrossel" id="casa">
+				<div class="carrossel" id="quintal">
 					<div class="control">
-						<div class="prev"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 429.96113 429">
+						<div class="prev">
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 429.96113 429">
 								<path
 									d="m345 205.480469h-200.5l75.5-75.5c3.894531-3.894531 3.894531-10.207031 0-14.097657-3.894531-3.894531-10.207031-3.894531-14.097656 0l-92.5 92.5c-1.882813 1.878907-2.929688 4.4375-2.902344 7.097657.019531 2.652343 1.058594 5.195312 2.902344 7.101562l92.5 92.5c1.875 1.886719 4.4375 2.933594 7.097656 2.898438 2.652344-.011719 5.199219-1.050781 7.101562-2.898438 1.871094-1.871093 2.925782-4.40625 2.925782-7.050781s-1.054688-5.183594-2.925782-7.050781l-75.601562-75.5h200.5c5.523438 0 10-4.476563 10-10 0-5.523438-4.476562-10-10-10zm0 0"
 									fill="#fff" />
-							</svg></div>
+							</svg>
+						</div>
 						<div class="next"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 429.96113 429">
 								<path
 									d="m224.199219 115.882812c-3.890625-3.894531-10.203125-3.894531-14.097657 0-3.894531 3.890626-3.894531 10.203126 0 14.097657l75.5 75.5h-200.601562c-5.523438 0-10 4.476562-10 10 0 5.523437 4.476562 10 10 10h200.5l-75.5 75.5c-1.871094 1.867187-2.925781 4.40625-2.925781 7.050781s1.054687 5.179688 2.925781 7.050781c1.875 1.886719 4.4375 2.933594 7.101562 2.898438 2.652344-.011719 5.199219-1.050781 7.097657-2.898438l92.5-92.5c1.882812-1.882812 2.929687-4.441406 2.902343-7.101562-.019531-2.652344-1.058593-5.191407-2.902343-7.097657zm0 0"
@@ -468,37 +496,59 @@
 					</div>
 					<div class="slider">
 						<div class="slide active">
-							<img src="./assets/Imagem/fotos/FGR-Jardins-Veneza-area-gourmet-churrasqueira.webp" />
+							<img width="1500" height="1008"
+								src="./assets/Imagem/fotos/FGR-Jardins-Veneza-area-gourmet-churrasqueira.webp"
+								alt="FGR Jardins Veneza área gourmet - churrasqueira"
+								title="FGR Jardins Veneza área gourmet - churrasqueira" />
 						</div>
 						<div class="slide active">
-							<img src="./assets/Imagem/fotos/FGR-Jardins-Veneza-area-gourmet.webp" />
+							<img width="1500" height="1000"
+								src="./assets/Imagem/fotos/FGR-Jardins-Veneza-area-gourmet.webp"
+								alt="FGR Jardins Veneza área gourmet" title="FGR Jardins Veneza área gourmet" />
 						</div>
 						<div class="slide active">
-							<img src="./assets/Imagem/fotos/FGR-Jardins-Veneza-area-lazer.webp" />
+							<img width="1500" height="999"
+								src="./assets/Imagem/fotos/FGR-Jardins-Veneza-area-lazer.webp"
+								alt="FGR Jardins Veneza área de lazer" title="FGR Jardins Veneza área de lazer" />
 						</div>
 						<div class="slide active">
-							<img src="./assets/Imagem/fotos/FGR-Jardins-Veneza-cozinha-patio.webp" />
+							<img width="1500" height="998"
+								src="./assets/Imagem/fotos/FGR-Jardins-Veneza-cozinha-patio.webp"
+								alt="FGR Jardins Veneza cozinha pátio" title="FGR Jardins Veneza cozinha pátio" />
 						</div>
 						<div class="slide active">
-							<img src="./assets/Imagem/fotos/FGR-Jardins-Veneza-fachada-frente.webp" />
+							<img width="1500" height="1000"
+								src="./assets/Imagem/fotos/FGR-Jardins-Veneza-fachada-frente.webp"
+								alt="FGR Jardins Veneza fachada frente" title="FGR Jardins Veneza fachada frente" />
 						</div>
 						<div class="slide active">
-							<img src="./assets/Imagem/fotos/FGR-Jardins-Veneza-fachada-garagem.webp" />
+							<img width="1500" height="1200"
+								src="./assets/Imagem/fotos/FGR-Jardins-Veneza-fachada-garagem.webp"
+								alt="FGR Jardins Veneza fachada garagem" title="FGR Jardins Veneza fachada garagem" />
 						</div>
 						<div class="slide active">
-							<img src="./assets/Imagem/fotos/FGR-Jardins-Veneza-jardim.webp" />
+							<img width="1500" height="1000" src="./assets/Imagem/fotos/FGR-Jardins-Veneza-jardim.webp"
+								alt="FGR Jardins Veneza jardim" title="FGR Jardins Veneza jardim" />
 						</div>
 						<div class="slide active">
-							<img src="./assets/Imagem/fotos/FGR-Jardins-Veneza-piscina-deck.webp" />
+							<img width="1500" height="1000"
+								src="./assets/Imagem/fotos/FGR-Jardins-Veneza-piscina-deck.webp"
+								alt="FGR Jardins Veneza piscina deck" title="FGR Jardins Veneza piscina deck" />
 						</div>
 						<div class="slide active">
-							<img src="./assets/Imagem/fotos/FGR-Jardins-Veneza-piscina-vista.webp" />
+							<img width="1500" height="1000"
+								src="./assets/Imagem/fotos/FGR-Jardins-Veneza-piscina-vista.webp"
+								alt="FGR Jardins Veneza vista piscina" title="FGR Jardins Veneza vista piscina" />
 						</div>
 						<div class="slide active">
-							<img src="./assets/Imagem/fotos/FGR-Jardins-Veneza-quintal-completo.webp" />
+							<img width="1500" height="1000"
+								src="./assets/Imagem/fotos/FGR-Jardins-Veneza-quintal-completo.webp"
+								alt="FGR Jardins Veneza quintal completo" title="FGR Jardins Veneza quintal completo" />
 						</div>
 						<div class="slide active">
-							<img src="./assets/Imagem/fotos/FGR-Jardins-Veneza-quintal-fachada.webp" />
+							<img width="1500" height="1000"
+								src="./assets/Imagem/fotos/FGR-Jardins-Veneza-quintal-fachada.webp"
+								alt="FGR Jardins Veneza vista do quintal" title="FGR Jardins Veneza vista do quintal" />
 						</div>
 					</div>
 					<div class="indicator">
@@ -512,8 +562,9 @@
 				<div class="texto">
 					<h2>PLANTAS DE 2 A 4 QUARTOS</h2>
 					<p>
-						Cada cantinho do Casas Jardins foi imaginado para você e sua família viverem bem. São diversas opções de plantas para atender 
-						até as famílias mais exigentes. 
+						Cada cantinho do Casas Jardins foi imaginado para você e sua família viverem bem. São diversas
+						opções de plantas para atender
+						até as famílias mais exigentes.
 					</p>
 				</div>
 				<div class="plantas">
@@ -552,7 +603,9 @@
 									</div>
 								</div>
 								<div class="imagem">
-									<img src="assets/Imagem/Planta/2-suites.webp" />
+									<img width="1280" height="869" src="assets/Imagem/Planta/2-suites.webp"
+										alt="FGR Jardins Veneza - Planta de 2 suítes"
+										title="FGR Jardins Veneza - Planta de 2 suítes" />
 								</div>
 							</div>
 							<div class="imagemLocal">
@@ -587,7 +640,10 @@
 									</div>
 								</div>
 								<div class="imagem">
-									<img src="assets/Imagem/Planta/2-suites-com-homeoffice-1.webp" />
+									<img width="1280" height="869"
+										src="assets/Imagem/Planta/2-suites-com-homeoffice-1.webp"
+										alt="FGR Jardins Veneza - Planta de 2 suítes com Home Office"
+										title="FGR Jardins Veneza - Planta de 2 suítes com Home Office" />
 								</div>
 							</div>
 						</div>
@@ -627,7 +683,9 @@
 									</div>
 								</div>
 								<div class="imagem">
-									<img src="assets/Imagem/Planta/3-suites.webp" />
+									<img width="1280" height="869" src="assets/Imagem/Planta/3-suites.webp"
+										alt="FGR Jardins Veneza - Planta de 3 suítes"
+										title="FGR Jardins Veneza - Planta de 3 suítes" />
 								</div>
 							</div>
 							<div class="imagemLocal">
@@ -662,7 +720,10 @@
 									</div>
 								</div>
 								<div class="imagem">
-									<img src="assets/Imagem/Planta/3-suites-com-homeoffice.webp" />
+									<img width="1280" height="869"
+										src="assets/Imagem/Planta/3-suites-com-homeoffice.webp"
+										alt="FGR Jardins Veneza - Planta de 3 suítes com Home Office"
+										title="FGR Jardins Veneza - Planta de 3 suítes com Home Office" />
 								</div>
 							</div>
 						</div>
@@ -702,7 +763,10 @@
 									</div>
 								</div>
 								<div class="imagem">
-									<img src="assets/Imagem/Planta/4-quartos-sendo-2-suites.webp" />
+									<img width="1280" height="869"
+										src="assets/Imagem/Planta/4-quartos-sendo-2-suites.webp"
+										alt="FGR Jardins Veneza - Planta de 4 quartos com 2 suítes"
+										title="FGR Jardins Veneza - Planta de 4 quartos com 2 suítes" />
 								</div>
 							</div>
 							<div class="imagemLocal">
@@ -737,7 +801,10 @@
 									</div>
 								</div>
 								<div class="imagem">
-									<img src="assets/Imagem/Planta/4-quartos-sendo-3-suites.webp" />
+									<img width="1280" height="869"
+										src="assets/Imagem/Planta/4-quartos-sendo-3-suites.webp"
+										alt="FGR Jardins Veneza - Planta de 4 quartos com 3 suítes"
+										title="FGR Jardins Veneza - Planta de 4 quartos com 3 suítes" />
 								</div>
 							</div>
 						</div>
@@ -792,18 +859,19 @@
 				<form method="post" action="javascript:executaEnvio();">
 					<input placeholder="Nome completo" class="form-control" type="name" name="nome" id="nome" value=""
 						autocomplete="on" required="" />
-					<input class="form-control" type="email" name="email" id="email" value="" inputmode="email"
-						required="" placeholder="E-mail" />
-					<input class="form-control" type="tel" name="telefone" id="telefone" value="" inputmode="tel"
-						required="" placeholder="Telefone / WhatsApp" />
+					<input class="form-control" type="email" name="email" id="email" value="" required=""
+						placeholder="E-mail" />
+					<input class="form-control" type="tel" name="telefone" id="telefone" value="" required=""
+						placeholder="Telefone / WhatsApp" />
 					<p>Qual meio de contato de preferência?</p>
 					<div class="meioContato">
-						<div class="option"><input id="meioContato" name="meioContato" type="radio"
-								checked><label>WhatsApp</label></div>
-						<div class="option"><input id="meioContato" name="meioContato"
-								type="radio"><label>Ligação</label></div>
-						<div class="option"><input id="meioContato" name="meioContato"
-								type="radio"><label>E-mail</label></div>
+						<div class="option"><input id="formCheck-1" name="meioContato" type="radio" value="WhatsApp"
+								checked><label for="formCheck-1">WhatsApp</label></div>
+						<div class="option"><input id="formCheck-2" name="meioContato" type="radio"
+								value="Ligação"><label for="formCheck-2">Ligação</label></div>
+						<div class="option"><input id="formCheck-3" name="meioContato" type="radio" value="Email"><label
+								for="formCheck-3">E-mail</label>
+						</div>
 					</div>
 					<button type="submit" id="botao">Reservar minha casa agora!</button>
 				</form>
@@ -811,20 +879,19 @@
 		</div>
 	</section>
 	<section class="e">
-		<a href="https://api.whatsapp.com/send?phone=+5562984220306" target="_blank">
-		<div>
+		<a href="https://api.whatsapp.com/send?phone=+5562984220306" target="_blank" rel="noopener" rel="noreferrer">
 			<svg xmlns="http://www.w3.org/2000/svg" viewBox="-23 -21 682 682.66669">
-				<path
+				<path 
 					d="m544.386719 93.007812c-59.875-59.945312-139.503907-92.9726558-224.335938-93.007812-174.804687 0-317.070312 142.261719-317.140625 317.113281-.023437 55.894531 14.578125 110.457031 42.332032 158.550781l-44.992188 164.335938 168.121094-44.101562c46.324218 25.269531 98.476562 38.585937 151.550781 38.601562h.132813c174.785156 0 317.066406-142.273438 317.132812-317.132812.035156-84.742188-32.921875-164.417969-92.800781-224.359376zm-224.335938 487.933594h-.109375c-47.296875-.019531-93.683594-12.730468-134.160156-36.742187l-9.621094-5.714844-99.765625 26.171875 26.628907-97.269531-6.269532-9.972657c-26.386718-41.96875-40.320312-90.476562-40.296875-140.28125.054688-145.332031 118.304688-263.570312 263.699219-263.570312 70.40625.023438 136.589844 27.476562 186.355469 77.300781s77.15625 116.050781 77.132812 186.484375c-.0625 145.34375-118.304687 263.59375-263.59375 263.59375zm144.585938-197.417968c-7.921875-3.96875-46.882813-23.132813-54.148438-25.78125-7.257812-2.644532-12.546875-3.960938-17.824219 3.96875-5.285156 7.929687-20.46875 25.78125-25.09375 31.066406-4.625 5.289062-9.242187 5.953125-17.167968 1.984375-7.925782-3.964844-33.457032-12.335938-63.726563-39.332031-23.554687-21.011719-39.457031-46.960938-44.082031-54.890626-4.617188-7.9375-.039062-11.8125 3.476562-16.171874 8.578126-10.652344 17.167969-21.820313 19.808594-27.105469 2.644532-5.289063 1.320313-9.917969-.664062-13.882813-1.976563-3.964844-17.824219-42.96875-24.425782-58.839844-6.4375-15.445312-12.964843-13.359374-17.832031-13.601562-4.617187-.230469-9.902343-.277344-15.1875-.277344-5.28125 0-13.867187 1.980469-21.132812 9.917969-7.261719 7.933594-27.730469 27.101563-27.730469 66.105469s28.394531 76.683594 32.355469 81.972656c3.960937 5.289062 55.878906 85.328125 135.367187 119.648438 18.90625 8.171874 33.664063 13.042968 45.175782 16.695312 18.984374 6.03125 36.253906 5.179688 49.910156 3.140625 15.226562-2.277344 46.878906-19.171875 53.488281-37.679687 6.601563-18.511719 6.601563-34.375 4.617187-37.683594-1.976562-3.304688-7.261718-5.285156-15.183593-9.253906zm0 0"
-					fill-rule="evenodd" />
+					fill="#fff" />
 			</svg>
-		</div>
-	</a>
+		</a>
 	</section>
 	<footer>
 		<div class="logo">
 			<a href="#inicio">
-				<img src="assets/Imagem/portfolio-imoveis-logo-p.webp" />
+				<img width="400" height="65" src="assets/Imagem/portfolio-imoveis-logo-p.webp" alt="Portfolio Imóveis"
+					title="Portfolio Imóveis" />
 			</a>
 		</div>
 		<div class="contato">
@@ -852,10 +919,7 @@
 		</div>
 		<div class="direitos">
 			<p>
-				Todos direitos e responsabilidade de Portfolio Imóveis@
-				<script>
-					document.write(new Date().getFullYear());
-				</script>
+				Todos direitos e responsabilidade de Portfolio Imóveis@<span id='ano'></span>
 			</p>
 			<p>
 				feito por <a href="https://hi4u.me"><b>Haul Iau</b></a>
@@ -864,6 +928,200 @@
 	</footer>
 </body>
 
-<script src="assets/Java/script.js"></script>
+<script src="assets/Java/sw.js"></script>
+<script>
+	const carrosseis = document.querySelectorAll(".carrossel");
+
+	for (const carrossel of carrosseis) {
+		const controle = carrossel.querySelector(".control");
+		const modal = carrossel.querySelector(".modal");
+		const prev = carrossel.querySelector(".prev");
+		const next = carrossel.querySelector(".next");
+		const slider = carrossel.querySelector(".slider");
+		const indicator = carrossel.querySelector(".indicator ");
+		const indicatorRoll = carrossel.querySelector(".indicator .roll");
+		let index = 0;
+
+		slider.addEventListener("click", function () {
+			controle.classList.add("active");
+		});
+
+		modal.addEventListener("click", function () {
+			controle.classList.remove("active");
+		});
+
+		prev.addEventListener("click", function () {
+			prevSlide();
+			updateCircleIndicator();
+			scrollIndicator();
+			resetTimer();
+		});
+
+		next.addEventListener("click", function () {
+			nextSlide();
+			updateCircleIndicator();
+			scrollIndicator();
+			resetTimer();
+		});
+
+		function prevSlide() {
+			if (index == 0) {
+				index = slider.children.length - 1;
+			} else {
+				index--;
+			}
+			changeSlide();
+		}
+
+		function nextSlide() {
+			if (index == slider.children.length - 1) {
+				index = 0;
+			} else {
+				index++;
+			}
+			changeSlide();
+		}
+
+		/* Criando um array das imagens de cada slider */
+		let imagens = [];
+		for (const i of slider.querySelectorAll("img")) {
+			imagens.push({ width: i.width, height: i.height, src: i.src, alt: i.alt, title: i.title });
+		}
+
+		// create circle indicators
+		function circleIndicator() {
+			for (let i = 0; i < slider.children.length; i++) {
+				const div = document.createElement("div");
+				div.innerHTML = `<img id="${i}" width="${imagens[i].width}" height="${imagens[i].height}"  src="${imagens[i].src}"  alt="${imagens[i].alt}" tittle="${imagens[i].title}" />`;
+				div.addEventListener("click", function () {
+					indicateSlide(this);
+					scrollIndicator();
+				});
+				div.id = i;
+				if (i == 0) {
+					div.className = "active";
+				}
+				indicatorRoll.appendChild(div);
+			}
+		}
+		circleIndicator();
+
+		function updateCircleIndicator() {
+			for (const i of indicatorRoll.children) {
+				i.classList.remove("active");
+			}
+			indicatorRoll.children[index].classList.add("active");
+		}
+
+		function changeSlide() {
+			for (const i of slider.children) {
+				i.classList.remove("active");
+			}
+			slider.children[index].classList.add("active");
+		}
+
+		function indicateSlide(element) {
+			index = element.id;
+			changeSlide();
+			updateCircleIndicator();
+			resetTimer();
+		}
+
+		function resetTimer() {
+			clearInterval(timer);
+			timer = setInterval(autoPlay, 4000);
+		}
+
+		function scrollIndicator() {
+			var imageIndicator = carrossel.querySelector(".indicator .roll div")
+				.offsetWidth;
+			indicator.scrollLeft =
+				indicatorRoll.children[index].id * imageIndicator - imageIndicator / 2;
+		}
+
+		function autoPlay() {
+			nextSlide();
+			updateCircleIndicator();
+			scrollIndicator();
+		}
+
+		let timer = setInterval(autoPlay, 4000);
+	}
+
+	//modal plantas
+
+	const imgPlantas = document.querySelectorAll(".imagemLocal");
+
+	for (const imgPlanta of imgPlantas) {
+		const imagemPlanta = imgPlanta.querySelector(".imagem");
+		const modalPlanta = imgPlanta.querySelector(".modalPlanta");
+
+		imagemPlanta.addEventListener("click", function () {
+			imgPlanta.classList.add("active");
+		});
+
+		modalPlanta.addEventListener("click", function () {
+			imgPlanta.classList.remove("active");
+			console.log(imgPlanta.classList);
+		});
+	}
+
+	//adiciona ano 
+
+	const ano = new Date().getFullYear();
+	document.getElementById("ano").innerHTML = ano;
+
+	// Envia email
+
+	async function enviar() {
+		const url = window.location.hostname.replace(/^[^/]*\/\/\w+.|(www.)/g, '');
+		const myHeaders = new Headers();
+		myHeaders.append('Content-Type', 'application/json');
+
+		let contatoPor = async () => {
+			let resp = [];
+			if (document.querySelector('#formCheck-1').checked) resp.push('WhatsApp');
+			if (document.querySelector('#formCheck-2').checked) resp.push('Ligação');
+			if (document.querySelector('#formCheck-3').checked) resp.push('Email');
+			return await `${resp.filter((el) => el != null)}`;
+		};
+
+		let raw = JSON.stringify({
+			de: `site@${url}`,
+			para: ['mkt@hi4u.me'],
+			assunto: `Solciitação de contato pelo formulário do site ${url}`,
+			mensagem: `Novo contato do site ${url}\n\nNome: ${document.querySelector('input[type="name"]').value}\n\nEmail: ${document.querySelector('input[type="email"]').value
+				}\n\nTelefone: ${document.querySelector('input[type="tel"]').value
+				}\n\nPreferência de contato por: ${await contatoPor()}`,
+		});
+
+		const requestOptions = {
+			method: 'POST',
+			headers: myHeaders,
+			body: raw,
+		};
+
+		return await fetch('https://services.rangell.com.br/v1/enviar', requestOptions)
+			.then((response) => response.text())
+			.then((result) => {
+				console.log(result);
+				window.alert('Dados enviados. Obrigado, em breve entraremos em contato');
+				document.querySelector('input[type="name"]').value = '';
+				document.querySelector('input[type="email"]').value = '';
+				document.querySelector('input[type="tel"]').value = '';
+			})
+			.catch((error) => {
+				console.log('error', error);
+				window.alert(
+					'Algum dado está faltando ou um erro inesperado aconteceu, revise os dados ou recarregue a página e tente novamente.'
+				);
+			});
+	}
+
+	async function executaEnvio() {
+		document.querySelector('#botao').disabled = true;
+		await enviar();
+		document.querySelector('#botao').disabled = false;
+	}</script>
 
 </html>

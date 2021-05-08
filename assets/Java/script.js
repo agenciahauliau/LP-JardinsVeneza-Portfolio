@@ -53,14 +53,14 @@ for (const carrossel of carrosseis) {
   /* Criando um array das imagens de cada slider */
   let imagens = [];
   for (const i of slider.querySelectorAll("img")) {
-    imagens.push(i.src);
+    imagens.push({src: i.src, alt: i.alt, title: i.title});
   }
 
   // create circle indicators
   function circleIndicator() {
     for (let i = 0; i < slider.children.length; i++) {
       const div = document.createElement("div");
-      div.innerHTML = `<img id="${i}" src="${imagens[i]}" />`;
+      div.innerHTML = `<img id="${i}"  src="${imagens[i].src}"  alt="${imagens[i].alt}" tittle="${imagens[i].title}" />`;
       div.addEventListener("click", function () {
         indicateSlide(this);
         scrollIndicator();
@@ -101,8 +101,10 @@ for (const carrossel of carrosseis) {
   }
 
   function scrollIndicator() {
-    var imageIndicator = carrossel.querySelector(".indicator .roll div").offsetWidth;
-    indicator.scrollLeft = indicatorRoll.children[index].id * imageIndicator - (imageIndicator / 2);
+    var imageIndicator = carrossel.querySelector(".indicator .roll div")
+      .offsetWidth;
+    indicator.scrollLeft =
+      indicatorRoll.children[index].id * imageIndicator - imageIndicator / 2;
   }
 
   function autoPlay() {
@@ -126,6 +128,9 @@ for (const imgPlanta of imgPlantas) {
 
   modalPlanta.addEventListener("click", function () {
     imgPlanta.classList.remove("active");
-    console.log(imgPlanta.classList)
+    console.log(imgPlanta.classList);
   });
 }
+
+const ano = new Date().getFullYear();
+document.getElementById("ano").innerHTML = ano;

@@ -1,16 +1,100 @@
 {
-	"short_name": "FGR Jardins Veneza",
+	"short_name": "FGR Veneza",
 	"name": "FGR Jardins Veneza",
-	"start_url": ".",
 	"background_color": "#ffffff",
-	"theme_color": "#ff0800",
+	"theme_color": "#d81f25",
 	"display": "minimal-ui",
 	"description": "Casas térreas e sobrados com opções diferenciadas de fachadas para você escolher, e a possibilidade de financiar tudo direto com a FGR.",
 	"categories": ["business", "finance", "lifestyle"],
 	"dir": "ltr",
 	"lang": "pt-BR",
 	"orientation": "any",
-	"screenshots": "any",
+	"screenshots" : [
+		{
+		  "src": "assets/Imagem/Fotos/FGR-Jardins-Veneza-area-gourmet.webp",
+		  "type": "image/webp"
+		},
+		{
+		  "src": "assets/Imagem/Fotos/FGR-Jardins-Veneza-area-gourmet-churrasqueira.webp",
+		  "type": "image/webp"
+		},
+		{
+		  "src": "assets/Imagem/Fotos/FGR-Jardins-Veneza-area-lazer.webp",
+		  "type": "image/webp"
+		},
+		{
+		  "src": "assets/Imagem/Fotos/FGR-Jardins-Veneza-cozinha-bancada.webp",
+		  "type": "image/webp"
+		},
+		{
+		  "src": "assets/Imagem/Fotos/FGR-Jardins-Veneza-cozinha-decorada.webp",
+		  "type": "image/webp"
+		},
+		{
+		  "src": "assets/Imagem/Fotos/FGR-Jardins-Veneza-cozinha-patio.webp",
+		  "type": "image/webp"
+		},
+		{
+		  "src": "assets/Imagem/Fotos/FGR-Jardins-Veneza-escritorio.webp",
+		  "type": "image/webp"
+		},
+		{
+		  "src": "assets/Imagem/Fotos/FGR-Jardins-Veneza-fachada-frente.webp",
+		  "type": "image/webp"
+		},
+		{
+		  "src": "assets/Imagem/Fotos/FGR-Jardins-Veneza-fachada-garagem.webp",
+		  "type": "image/webp"
+		},
+		{
+		  "src": "assets/Imagem/Fotos/FGR-Jardins-Veneza-home-office-sala.webp",
+		  "type": "image/webp"
+		},
+		{
+		  "src": "assets/Imagem/Fotos/FGR-Jardins-Veneza-jardim.webp",
+		  "type": "image/webp"
+		},
+		{
+		  "src": "assets/Imagem/Fotos/FGR-Jardins-Veneza-piscina-deck.webp",
+		  "type": "image/webp"
+		},
+		{
+		  "src": "assets/Imagem/Fotos/FGR-Jardins-Veneza-piscina-vista.webp",
+		  "type": "image/webp"
+		},
+		{
+		  "src": "assets/Imagem/Fotos/FGR-Jardins-Veneza-quarto.webp",
+		  "type": "image/webp"
+		},
+		{
+		  "src": "assets/Imagem/Fotos/FGR-Jardins-Veneza-quarto-menino.webp",
+		  "type": "image/webp"
+		},
+		{
+		  "src": "assets/Imagem/Fotos/FGR-Jardins-Veneza-quintal-completo.webp",
+		  "type": "image/webp"
+		},
+		{
+		  "src": "assets/Imagem/Fotos/FGR-Jardins-Veneza-quintal-fachada.webp",
+		  "type": "image/webp"
+		},
+		{
+		  "src": "assets/Imagem/Fotos/FGR-Jardins-Veneza-sala-2-ambientes.webp",
+		  "type": "image/webp"
+		},
+		{
+		  "src": "assets/Imagem/Fotos/FGR-Jardins-Veneza-sala-de-jantar.webp",
+		  "type": "image/webp"
+		},
+		{
+		  "src": "assets/Imagem/Fotos/FGR-Jardins-Veneza-suite.webp",
+		  "type": "image/webp"
+		},
+		{
+		  "src": "assets/Imagem/Fotos/FGR-Jardins-Veneza-suite-2.webp",
+		  "type": "image/webp"
+		}
+	  ],
 	"icons": [
 		{
 		  "src": "assets/Imagem/Icons/windows10/SmallTile.scale-100.png",

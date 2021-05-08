@@ -821,15 +821,6 @@ section.e a {
   height: 100%;
 }
 
-section.e a div {
-  width: 100%;
-  height: 100%;
-}
-
-section.e a div svg {
-  fill: #fff;
-}
-
 footer {
   padding: 12px;
   background: #0001;
