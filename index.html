@@ -4,7 +4,8 @@
 <head>
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="apple-touch-icon" href="assets/Imagem/Fotos/FGR-Jardins-Lyon-fachada-garagem.jpg" />
+	<link rel="manifest" href="site.webmanifest" type="application/manifest+json">
+	<meta name="theme-color" content="#d81f25">
 	<meta http-equiv="Cache-Control" content="must-revalidate" />
 	<title>FGR Jardins</title>
 	<meta name="twitter:title" content="FGR Jardins" />
@@ -113,6 +114,18 @@
 		}
 	</style>
 	<link rel="stylesheet" href="assets/Css/Style.css" />
+	<script>
+		if ('serviceWorker' in navigator) {
+			navigator.serviceWorker
+				.register('assets/Java/sw.js')
+				.then(function () {
+					console.log('service worker registered');
+				})
+				.catch(function () {
+					console.warn('service worker failed');
+				});
+		}
+	</script>
 	<!-- Global site tag (gtag.js) - Google Ads: 379164120 -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=AW-379164120"></script>
 	<script>
@@ -180,7 +193,6 @@
 		<div class="container">
 			<div class="videoBack">
 				<video autoplay muted loop>
-					<source src="assets/Video/NovoJardinsembreve!.webm" type="video/webm" />
 					<source src="assets/Video/NovoJardinsembreve!.mp4" type="video/mp4" />
 				</video>
 			</div>
