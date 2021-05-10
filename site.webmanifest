@@ -683,10 +683,6 @@
       "purpose": "maskable"
     },
     {
-      "src": "assets/Imagem/Icons/firefox/firefox-marketplace-512-512.png",
-      "sizes": "512x512"
-    },
-    {
       "src": "assets/Imagem/Icons/firefox/firefox-marketplace-128-128.png",
       "sizes": "128x128"
     },
