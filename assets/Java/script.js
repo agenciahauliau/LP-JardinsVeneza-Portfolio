@@ -155,7 +155,7 @@ async function enviar() {
 
 	let raw = JSON.stringify({
 		de: `site@${url}`,
-		para: ['cristiane@portfolioimoveis.com.br','mkt@hi4u.me'],
+		para: ['cristiane@portfolioimoveis.com.br','alessandrocondominios@gmail.com'],
 		assunto: `Solciitação de contato pelo formulário do site ${url}`,
 		mensagem: `Novo contato do site ${url}\n\nNome: ${document.querySelector('input[type="name"]').value}\n\nEmail: ${
 			document.querySelector('input[type="email"]').value
